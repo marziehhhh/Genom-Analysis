@@ -1,0 +1,86 @@
+#!/bin/bash -l
+
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH -t 15:00:00
+#SBATCH -J eggnog_annotation
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/eggnog_annotation_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/eggnog_annotation_%j.err
+#SBATCH --mem=16G
+
+# Load required modules
+module load bioinfo-tools eggNOG-mapper/2.1.9 hmmer
+
+# Define directories
+WORK_DIR="/home/marziehh/Genom-Analysis"
+PROKKA_DIR="${WORK_DIR}/results/annotation"
+PILON_DIR="${WORK_DIR}/results/polishing"
+EGGNOG_DIR="${WORK_DIR}/results/eggnog"
+
+# Create output directory
+mkdir -p "$EGGNOG_DIR"
+
+echo "Starting eggNOG annotation at $(date)"
+
+# Process each strain
+for strain in r7 hp126; do
+    echo "Processing strain: ${strain}"
+
+    # 1. DIAMOND mode - Uses protein sequences from Prokka
+    echo "  Running DIAMOND annotation for ${strain}..."
+    faa="${PROKKA_DIR}/prokka_${strain}/${strain}_annotation.faa"
+    gff="${PROKKA_DIR}/prokka_${strain}/${strain}_annotation.gff"
+    out_diamond="${EGGNOG_DIR}/diamond_${strain}"
+    mkdir -p "$out_diamond"
+
+    if [[ -f "$faa" && -f "$gff" ]]; then
+        emapper.py \
+            -i "$faa" \
+            --itype proteins \
+            -m diamond \
+            --cpu 4 \
+            -o "eggnog_diamond_${strain}" \
+            --output_dir "$out_diamond" \
+            --decorate_gff "$gff" \
+            --decorate_gff_ID_field ID \
+            --tax_scope bacteria \
+            --excel \
+            --override
+        echo "  DIAMOND annotation complete for ${strain}"
+    else
+        echo "  ERROR: Missing Prokka input files for ${strain}"
+    fi
+
+    # 2. HMMER mode - Uses genome sequence and Prodigal
+    echo "  Running HMMER annotation for ${strain}..."
+    polished="${PILON_DIR}/pilon_${strain}/polished_${strain}.fasta"
+    out_hmmer="${EGGNOG_DIR}/hmmer_${strain}"
+    mkdir -p "$out_hmmer"
+
+    if [[ -f "$polished" ]]; then
+        emapper.py \
+            -i "$polished" \
+            --itype genome \
+            --genepred prodigal \
+            -m hmmer \
+            --cpu 4 \
+            -o "eggnog_hmmer_${strain}" \
+            --output_dir "$out_hmmer" \
+            --tax_scope bacteria \
+            --dbmem \
+            --override
+        echo "  HMMER annotation complete for ${strain}"
+    else
+        echo "  ERROR: Missing polished genome for ${strain}"
+    fi
+
+    echo "Completed processing for strain: ${strain}"
+    echo "----------------------------------------"
+done
+
+echo "All eggNOG annotation runs completed at $(date)"

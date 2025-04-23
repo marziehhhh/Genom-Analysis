@@ -1,0 +1,40 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH -t 05:00:00
+#SBATCH -J flye_assembly
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=Marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/flye_%j.out
+
+# Load required modules
+module load bioinfo-tools Flye
+
+# Define paths to input files
+LONG_READ_HP126="/home/marziehh/Genom-Analysis/data/dna/hp126/long_read/SRR24413066.fastq.gz"
+LONG_READ_R7="/home/marziehh/Genom-Analysis/data/dna/r7/long_read/SRR24413072.fastq.gz"
+
+# Define output directories for Flye results
+OUTPUT_DIR_HP126="/home/marziehh/Genom-Analysis/results/assembly/flye_hp126"
+OUTPUT_DIR_R7="/home/marziehh/Genom-Analysis/results/assembly/flye_r7"
+
+# Create output directories if they don’t exist
+mkdir -p "${OUTPUT_DIR_HP126}"
+mkdir -p "${OUTPUT_DIR_R7}"
+
+# Run Flye for strain HP126
+echo "Starting genome assembly with Flye for HP126..."
+flye --nano-raw "${LONG_READ_HP126}" --out-dir "${OUTPUT_DIR_HP126}" --genome-size 9.7m --threads 4 
+
+echo "Assembly for HP126 completed."
+
+# Run Flye for strain R7
+echo "Starting genome assembly with Flye for R7..."
+flye --nano-raw "${LONG_READ_R7}" --out-dir "${OUTPUT_DIR_R7}" --genome-size 9.7m --threads 4 
+
+echo "Assembly for R7 completed."
+
+echo "Genome assembly for both HP126 and R7 completed successfully."

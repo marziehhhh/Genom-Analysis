@@ -1,0 +1,171 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH -t 04:00:00
+#SBATCH -J assembly_evaluation
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/assembly_evaluation_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/assembly_evaluation_%j.err
+#SBATCH --mem=16G
+
+# Stop if anything fails
+set -e
+
+# Load tools
+echo "Loading required modules..."
+module load bioinfo-tools
+module load quast/5.0.2
+module load BUSCO/5.7.1
+module load augustus/3.5.0-20231223-33fc04d
+module load MUMmer/3.23
+echo "Modules loaded."
+
+# ------------------------------------------------------------------------------
+# 1) Create a local Augustus config directory
+# ------------------------------------------------------------------------------
+echo "Creating local Augustus config..."
+
+# Assuming this is run from the correct directory
+source $AUGUSTUS_CONFIG_COPY
+
+echo "AUGUSTUS_CONFIG_PATH is set to: ${AUGUSTUS_CONFIG_PATH}"
+
+if [[ ! -d "${AUGUSTUS_CONFIG_PATH}" ]]; then
+    echo "Error: Augustus config dir not created. Please check \$AUGUSTUS_CONFIG_COPY steps!" >&2
+    exit 1
+fi
+
+mkdir -p "${AUGUSTUS_CONFIG_PATH}/species"
+chmod -R u+w "${AUGUSTUS_CONFIG_PATH}/species"
+echo "Local Augustus species contents: $(ls -la ${AUGUSTUS_CONFIG_PATH}/species || echo 'empty')"
+
+# ------------------------------------------------------------------------------
+# 2) Define working directories
+# ------------------------------------------------------------------------------
+WORK_DIR="/home/marziehh/Genom-Analysis"
+POLISH_DIR="${WORK_DIR}/results/polishing"
+EVAL_DIR="${WORK_DIR}/results/evaluation"
+REF_DIR="${WORK_DIR}/data/references"
+
+mkdir -p "${EVAL_DIR}"
+
+# ------------------------------------------------------------------------------
+# 3) Choose BUSCO lineage
+# ------------------------------------------------------------------------------
+LINEAGE="streptomycetales_odb10"
+if [[ ! -d "${BUSCO_LINEAGE_SETS}/${LINEAGE}" ]]; then
+    echo "Warning: ${LINEAGE} not found. Falling back to bacteria_odb10." >&2
+    LINEAGE="bacteria_odb10"
+    if [[ ! -d "${BUSCO_LINEAGE_SETS}/${LINEAGE}" ]]; then
+        echo "Error: Could not find bacteria_odb10 in \$BUSCO_LINEAGE_SETS!" >&2
+        exit 1
+    fi
+fi
+echo "Using BUSCO lineage: ${LINEAGE}"
+
+# ------------------------------------------------------------------------------
+# 4) QUAST function
+# ------------------------------------------------------------------------------
+run_quast() {
+    local strain="$1"
+    local polished="${POLISH_DIR}/pilon_${strain}/polished_${strain}.fasta"
+    local ref="${REF_DIR}/${strain^^}_genome.fasta"
+    local out_quast="${EVAL_DIR}/quast_${strain}"
+
+    if [[ ! -f "${polished}" ]]; then
+        echo "Error: Missing polished assembly ${polished}, cannot run QUAST." >&2
+        return 1
+    fi
+    if [[ ! -f "${ref}" ]]; then
+        echo "Error: Missing reference genome ${ref}, cannot run QUAST." >&2
+        return 1
+    fi
+
+    mkdir -p "${out_quast}"
+    quast.py "${polished}" -r "${ref}" -o "${out_quast}" --threads 4 --glimmer --large
+    echo "QUAST completed for ${strain}. See ${out_quast}/report.txt"
+}
+
+# ------------------------------------------------------------------------------
+# 5) BUSCO function
+# ------------------------------------------------------------------------------
+run_busco() {
+    local strain="$1"
+    local polished="${POLISH_DIR}/pilon_${strain}/polished_${strain}.fasta"
+    local out_busco="${EVAL_DIR}/busco_${strain}"
+
+    if [[ ! -f "${polished}" ]]; then
+        echo "Error: Missing ${polished}, cannot run BUSCO." >&2
+        return 1
+    fi
+
+    mkdir -p "${out_busco}"
+    busco -i "${polished}" -o "${strain}" -l "${BUSCO_LINEAGE_SETS}/${LINEAGE}" -m genome -c 4 --offline --out_path "${out_busco}"
+    
+    cd "${out_busco}"
+    generate_plot.py -wd "${strain}"
+    echo "BUSCO plot generated at ${out_busco}/busco_figure.png"
+    echo "BUSCO completed for ${strain}. See ${out_busco}/${strain}/short_summary.txt"
+}
+
+# ------------------------------------------------------------------------------
+# 6) MUMmer function
+# ------------------------------------------------------------------------------
+run_mummer() {
+    local ref="$1"
+    local query="$2"
+    local prefix="$3"
+    local out_mummer="${EVAL_DIR}/mummer_${prefix}"
+
+    if [[ ! -f "${ref}" ]]; then
+        echo "Error: Missing reference ${ref}, cannot run MUMmer." >&2
+        return 1
+    fi
+    if [[ ! -f "${query}" ]]; then
+        echo "Error: Missing query ${query}, cannot run MUMmer." >&2
+        return 1
+    fi
+
+    mkdir -p "${out_mummer}"
+    cd "${out_mummer}"
+    nucmer --prefix="${prefix}" "${ref}" "${query}"
+    mummerplot -R "${ref}" -Q "${query}" --filter --layout -p "${prefix}" "${prefix}.delta" --png
+    echo "MUMmer completed for ${prefix}. See ${out_mummer}/${prefix}.png"
+}
+
+# ------------------------------------------------------------------------------
+# 7) Main script logic
+# ------------------------------------------------------------------------------
+echo "Starting assembly evaluation for strains: hp126 and r7"
+
+for strain in hp126 r7; do
+    polished_file="${POLISH_DIR}/pilon_${strain}/polished_${strain}.fasta"
+    ref_file="${REF_DIR}/${strain^^}_genome.fasta"
+    if [[ -f "${polished_file}" ]]; then
+        run_quast "${strain}" || echo "QUAST failed for ${strain}"
+        run_busco "${strain}" || echo "BUSCO failed for ${strain}"
+        if [[ -f "${ref_file}" ]]; then
+            run_mummer "${ref_file}" "${polished_file}" "${strain}_vs_ref"
+        else
+            echo "Warning: Missing reference for ${strain}, skipping MUMmer vs ref" >&2
+        fi
+    else
+        echo "Warning: Skipping ${strain}, missing polished FASTA: ${polished_file}" >&2
+    fi
+done
+
+# Compare hp126 vs r7 polished assemblies if both exist
+hp_polished="${POLISH_DIR}/pilon_hp126/polished_hp126.fasta"
+r7_polished="${POLISH_DIR}/pilon_r7/polished_r7.fasta"
+if [[ -f "${hp_polished}" && -f "${r7_polished}" ]]; then
+    run_mummer "${r7_polished}" "${hp_polished}" "hp126_vs_r7"
+    echo "Note: For detailed rearrangement analysis between hp126 and r7, consider using ACT separately."
+else
+    echo "Warning: Cannot run MUMmer for hp126 vs r7, missing one or both assemblies" >&2
+fi
+
+echo "All analyses completed."

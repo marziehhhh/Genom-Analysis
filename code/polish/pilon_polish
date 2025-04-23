@@ -1,0 +1,126 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH -t 05:00:00
+#SBATCH -J pilon_polish
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=Marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/pilon_polish_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/pilon_polish_%j.err
+#SBATCH --mem=16G
+
+# Exit script on any error
+set -e
+
+# Load required modules
+module load bioinfo-tools bwa/0.7.18 samtools/1.20 Pilon/1.24
+echo "Loaded modules: $(module list)"
+
+# Check if Pilon module loaded correctly
+if [[ -z "$PILON_HOME" ]]; then
+    echo "Error: PILON_HOME is not set. Please check if Pilon/1.24 loaded correctly." >&2
+    exit 1
+fi
+
+# Verify Pilon JAR file exists
+if [[ ! -f "$PILON_HOME/pilon.jar" ]]; then
+    echo "Error: pilon.jar not found at $PILON_HOME/pilon.jar" >&2
+    exit 1
+fi
+
+# Define base directories (easy to change here if needed)
+WORK_DIR="/home/marziehh/Genom-Analysis"
+ASSEMBLY_DIR="${WORK_DIR}/results/assembly"
+MAPPING_DIR="${WORK_DIR}/results/mapping"
+POLISH_DIR="${WORK_DIR}/results/polishing"
+LOG_DIR="${WORK_DIR}/out"
+
+# Create log directory if it doesn’t exist
+mkdir -p "${LOG_DIR}"
+echo "Working directory: ${WORK_DIR}"
+
+# Function to polish genome for a strain
+# Parameters: strain (e.g., "hp126" or "r7"), reads_id (e.g., "SRR24413065" or "SRR24413071")
+polish_genome() {
+    local strain="$1"
+    local reads_id="$2"
+
+    # Define input files (modify paths here if file locations change)
+    local draft_assembly="${ASSEMBLY_DIR}/flye_${strain}/assembly.fasta"
+    local paired_reads_1="${WORK_DIR}/results/trimmed/trimmed_dna_short/${strain}/${reads_id}_1_trimmed.fastq.gz"
+    local paired_reads_2="${WORK_DIR}/results/trimmed/trimmed_dna_short/${strain}/${reads_id}_2_trimmed.fastq.gz"
+
+    # Define output directories and files
+    local mapping_dir="${MAPPING_DIR}/${strain}"
+    local polish_dir="${POLISH_DIR}/pilon_${strain}"
+    local bam_file="${mapping_dir}/${strain}_paired.bam"
+
+    # Create necessary directories
+    mkdir -p "${mapping_dir}" "${polish_dir}"
+    echo "Polishing directory for ${strain}: ${polish_dir}"
+
+    # Check if input files exist
+    echo "Checking input files for ${strain}..."
+    if [[ ! -f "${draft_assembly}" ]]; then
+        echo "Error: Draft assembly ${draft_assembly} not found!" >&2
+        exit 1
+    fi
+    if [[ ! -f "${paired_reads_1}" ]]; then
+        echo "Error: Paired reads ${paired_reads_1} not found!" >&2
+        exit 1
+    fi
+    if [[ ! -f "${paired_reads_2}" ]]; then
+        echo "Error: Paired reads ${paired_reads_2} not found!" >&2
+        exit 1
+    fi
+    echo "Draft assembly: ${draft_assembly}"
+    echo "Paired reads: ${paired_reads_1} ${paired_reads_2}"
+
+    # Step 1: Index the draft assembly
+    echo "Indexing draft assembly for ${strain}..."
+    bwa index "${draft_assembly}" || { echo "Error: Indexing failed!" >&2; exit 1; }
+
+    # Step 2: Map reads and create sorted BAM file
+    echo "Mapping paired-end reads for ${strain} (reads ID: ${reads_id})..."
+    bwa mem -t 4 "${draft_assembly}" "${paired_reads_1}" "${paired_reads_2}" | \
+        samtools view -b - | samtools sort -o "${bam_file}" || { echo "Error: Mapping or sorting failed!" >&2; exit 1; }
+
+    # Index the BAM file
+    echo "Indexing BAM file for ${strain}..."
+    samtools index "${bam_file}" || { echo "Error: BAM indexing failed!" >&2; exit 1; }
+    echo "BAM file created: ${bam_file}"
+
+    # Step 3: Run Pilon to polish the genome
+    echo "Running Pilon for ${strain} at $(date)..."
+    java -Xmx12G -jar "$PILON_HOME/pilon.jar" \
+        --genome "${draft_assembly}" \
+        --frags "${bam_file}" \
+        --output "polished_${strain}" \
+        --outdir "${polish_dir}" \
+        --threads 4 \
+        --fix all \
+        --changes \
+        --vcf \
+        || { echo "Error: Pilon failed for ${strain}!" >&2; exit 1; }
+
+    # Verify polished output exists
+    local polished_genome="${polish_dir}/polished_${strain}.fasta"
+    if [[ -f "${polished_genome}" ]]; then
+        echo "Polishing for ${strain} completed: ${polished_genome}"
+        ls -lh "${polished_genome}"
+    else
+        echo "Error: Polished genome not generated for ${strain}!" >&2
+        exit 1
+    fi
+}
+
+# Run polishing for HP126 and R7 strains (add or modify strains here)
+echo "Starting genome polishing..."
+polish_genome "hp126" "SRR24413065"
+polish_genome "r7" "SRR24413071"
+
+echo "Genome polishing for HP126 and R7 completed successfully."
+echo "Next step: Evaluate polished assemblies with QUAST"

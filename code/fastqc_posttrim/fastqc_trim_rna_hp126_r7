@@ -1,0 +1,60 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00
+#SBATCH -J fastqc_trimmed_rna
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=Marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/fastqc_trimmed_rna_%j.out
+
+# Load required modules
+module load bioinfo-tools FastQC
+
+# Move to working directory
+cd /home/marziehh/Genom-Analysis/
+
+# --- Configuration ---
+TRIM_DIR="results/trimmed/trimmed_rna"
+FASTQC_DIR="results/fastqc/rna_trimmed"
+
+SRR_IDS="SRR24516459 SRR24516460 SRR24516461 SRR24516462 SRR24516463 SRR24516464"
+
+# --- Setup ---
+set -e  # Exit on error
+mkdir -p ${FASTQC_DIR}/hp126
+mkdir -p ${FASTQC_DIR}/r7
+
+# --- Function to run FastQC on a sample ---
+run_fastqc() {
+    local srr_id=$1    # Sample ID (e.g., SRR24516459)
+    local strain=$2    # Strain (hp126 or r7)
+
+    # Define input paths for trimmed reads
+    local input_r1="${TRIM_DIR}/${strain}/${srr_id}_1_trimmed.fastq.gz"
+    local input_r2="${TRIM_DIR}/${strain}/${srr_id}_2_trimmed.fastq.gz"
+
+    # Define output directory for FastQC results
+    local output_dir="${FASTQC_DIR}/${strain}"
+
+    echo "Running FastQC for ${srr_id}..."
+
+    # Run FastQC on both paired-end files
+    fastqc "$input_r1" -o "$output_dir"
+    fastqc "$input_r2" -o "$output_dir"
+
+    echo "Finished FastQC for ${srr_id}."
+}
+
+# --- Process all samples ---
+for srr_id in ${SRR_IDS}; do
+    # Determine strain based on SRR ID
+    if [[ $srr_id == SRR24516459 || $srr_id == SRR24516460 || $srr_id == SRR24516461 ]]; then
+        run_fastqc "$srr_id" "hp126"
+    else
+        run_fastqc "$srr_id" "r7"
+    fi
+done
+
+echo "FastQC analysis completed for all trimmed RNA-seq samples."

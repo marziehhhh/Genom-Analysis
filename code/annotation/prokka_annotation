@@ -1,0 +1,66 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH -t 02:00:00
+#SBATCH -J prokka_annotation
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/prokka_annotation_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/prokka_annotation_%j.err
+#SBATCH --mem=8G
+
+# Load required modules
+echo "Loading modules for Prokka..."
+module load bioinfo-tools
+module load prokka/1.45-5b58020
+echo "Modules loaded."
+
+# Define directories
+WORK_DIR="/home/marziehh/Genom-Analysis"
+POLISH_DIR="${WORK_DIR}/results/polishing"
+REF_DIR="${WORK_DIR}/data/references"
+ANNOT_DIR="${WORK_DIR}/results/annotation"
+mkdir -p "${ANNOT_DIR}"
+
+# Define Prokka function
+run_prokka() {
+    local strain="$1"
+    local polished_fasta="${POLISH_DIR}/pilon_${strain}/polished_${strain}.fasta"
+    local faa_file="${REF_DIR}/${strain}_protein.faa"
+    local out_dir="${ANNOT_DIR}/prokka_${strain}"
+
+    if [[ ! -f "${polished_fasta}" ]]; then
+        echo "Error: Missing assembly file ${polished_fasta}" >&2
+        return 1
+    fi
+    if [[ ! -f "${faa_file}" ]]; then
+        echo "Error: Missing protein FASTA file ${faa_file}" >&2
+        return 1
+    fi
+
+    mkdir -p "${out_dir}"
+
+    prokka --outdir "${out_dir}" \
+           --prefix ${strain}_annotation \
+           --proteins "${faa_file}" \
+           --genus Streptomyces \
+           --species rimosus \
+           --kingdom Bacteria \
+           --cpus 4 \
+           --force \
+           --compliant \
+           "${polished_fasta}"
+
+    echo "Prokka annotation completed for ${strain}. Output in ${out_dir}"
+}
+
+# Run Prokka for both strains
+for strain in hp126 r7; do
+    run_prokka "${strain}" || echo "Prokka failed for ${strain}"
+done
+
+echo "Prokka annotation finished for all strains."
+

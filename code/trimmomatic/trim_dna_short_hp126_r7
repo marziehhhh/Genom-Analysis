@@ -1,0 +1,73 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00
+#SBATCH -J trim_fastqc_raw_dna_short
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=Marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/trim_fastqc_raw_dna_short_%j.out
+
+# Load tools
+module load bioinfo-tools
+module load trimmomatic/0.39
+
+# Move to working directory
+cd /home/marziehh/Genom-Analysis/
+
+# --- Configuration ---
+RAW_DIR="data/dna"
+TRIM_DIR="results/trimmed/trimmed_dna_short"
+
+ADAPTER_FILE="$TRIMMOMATIC_ROOT/adapters/TruSeq3-PE.fa"
+SRR_IDS="SRR24413065 SRR24413071"
+TRIM_PARAMS="ILLUMINACLIP:${ADAPTER_FILE}:2:30:10 LEADING:3 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:150"
+
+
+# --- Setup ---
+set -e  # Exit on error
+mkdir -p ${TRIM_DIR}/hp126
+mkdir -p ${TRIM_DIR}/r7
+
+
+# --- Function to trim a sample ---
+trim_sample() {
+    local srr_id=$1    # Sample ID (e.g., SRR24516459)
+    local strain=$2    # Strain (hp126 or r7)
+
+    # Define input and output paths
+    local input_r1="${RAW_DIR}/${strain}/short_read/${srr_id}_1.fastq.gz"
+    local input_r2="${RAW_DIR}/${strain}/short_read/${srr_id}_2.fastq.gz"
+    local output_p1="${TRIM_DIR}/${strain}/${srr_id}_1_trimmed.fastq.gz"
+    local output_u1="${TRIM_DIR}/${strain}/${srr_id}_1_unpaired.fastq.gz"
+    local output_p2="${TRIM_DIR}/${strain}/${srr_id}_2_trimmed.fastq.gz"
+    local output_u2="${TRIM_DIR}/${strain}/${srr_id}_2_unpaired.fastq.gz"
+
+    echo "Processing ${srr_id}..."
+
+    # Run Trimmomatic
+    trimmomatic PE -phred33 \
+        "$input_r1" "$input_r2" \
+        "$output_p1" "$output_u1" \
+        "$output_p2" "$output_u2" \
+        $TRIM_PARAMS
+
+    echo "Finished processing ${srr_id}."
+}
+
+# --- Process all samples ---
+for srr_id in ${SRR_IDS}; do
+    if [[ $srr_id == SRR24413065 ]]; then
+        trim_sample "$srr_id" "hp126"
+    else
+        trim_sample "$srr_id" "r7"
+    fi
+done
+
+echo "All RNA-seq samples have been trimmed."
+
+
+
+
+

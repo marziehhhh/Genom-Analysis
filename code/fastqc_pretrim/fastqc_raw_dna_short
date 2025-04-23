@@ -1,0 +1,44 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00
+#SBATCH -J fastqc_raw_dna_short
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=Marzieh.rahnama86@gmail.com
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/fastqc_raw_dna_short_%j.out
+
+# Load required modules
+module load bioinfo-tools FastQC
+
+# Move to working directory
+cd /home/marziehh/Genom-Analysis/
+
+# --- Configuration ---
+RAW_DIR="data/dna"
+FASTQC_DIR="results/fastqc/dna_short_read_raw"
+SRR_SHORT_IDS=("SRR24413065" "SRR24413071")  # hp126 and r7
+
+# --- Setup ---
+set -e
+
+mkdir -p ${FASTQC_DIR}/hp126
+mkdir -p ${FASTQC_DIR}/r7
+
+# --- Function to run FastQC on all samples ---
+
+for srr_id in "${SRR_SHORT_IDS[@]}"; do
+    if [[ $srr_id == "SRR24413065" ]]; then
+        strain="hp126"
+    else
+        strain="r7"
+    fi
+
+    fastqc ${RAW_DIR}/${strain}/short_read/${srr_id}_1.fastq.gz -o ${FASTQC_DIR}/${strain}/
+    fastqc ${RAW_DIR}/${strain}/short_read/${srr_id}_2.fastq.gz -o ${FASTQC_DIR}/${strain}/
+
+    echo "Finished FastQC for ${srr_id} (short reads)"
+done
+
+echo "FastQC for raw DNA short-reads completed."
