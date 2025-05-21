@@ -1,0 +1,42 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3      
+#SBATCH -M snowy               
+#SBATCH -p core                
+#SBATCH -n 4                   
+#SBATCH --mem=32G              
+#SBATCH -t 02:00:00            
+#SBATCH -J blast
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --mail-type=END,FAIL   
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/blast_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/blast_%j.err
+
+# 1. Load necessary modules
+module load bioinfo-tools
+module load blast
+
+# 2. Define file paths and directories
+HP126_GENOME="/home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta"
+R7_GENOME="/home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta"
+OUTPUT_DIR="/home/marziehh/Genom-Analysis/results/blast"
+
+# 3. Prepare output directory
+mkdir -p "$OUTPUT_DIR"
+cd "$OUTPUT_DIR"
+
+# 4. Create BLAST database from R7
+echo "🔧 Creating BLAST database from R7 genome..."
+makeblastdb -in "$R7_GENOME" -dbtype nucl -out r7_db
+
+# 5. Run BLASTN: HP126 as query vs R7 database
+echo "🚀 Running BLASTN comparison..."
+blastn -query "$HP126_GENOME" \
+       -db r7_db \
+       -outfmt 6 \
+       -num_threads 4 \
+       -evalue 1e-10 \
+       -out HP126_vs_R7_blastn.tsv
+
+# 6. Done!
+echo "✅ BLASTN comparison complete!"
+echo "📄 Results saved to: $OUTPUT_DIR/HP126_vs_R7_blastn.tsv"

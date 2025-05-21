@@ -1,0 +1,79 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3          
+#SBATCH -M snowy                   
+#SBATCH -p core                    
+#SBATCH -n 8                       
+#SBATCH --mem=16G                  
+#SBATCH -t 6:00:00                 
+#SBATCH -J readCounting            
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --mail-type=END,FAIL       
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/readCounting_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/readCounting_%j.err
+
+set -euo pipefail
+set -x
+
+log()  { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >&2; }
+error(){ echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: $1" >&2; exit 1; }
+
+# Load modules
+log "Loading modules"
+module load bioinfo-tools
+module load subread          # featureCounts
+module load htseq/2.0.2      # HTSeq‐count
+module load samtools/1.14    # BAM tools
+
+# Paths
+WORK_DIR="/home/marziehh/Genom-Analysis"
+BAM_DIR="/proj/uppmax2025-3-3/GA_marziehh/bwa"
+GFF="${WORK_DIR}/results/annotation/prokka_r7/r7_annotation_clean.gff"
+FC_DIR="/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts"
+HT_DIR="/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts"
+
+mkdir -p "${FC_DIR}" "${HT_DIR}"
+
+# Samples: ID and tag
+SAMPLES=(
+    "SRR24516459 HP126_RNA"
+    "SRR24516460 HP126_RNA"
+    "SRR24516461 HP126_RNA"
+    "SRR24516462 R7_RNA"
+    "SRR24516463 R7_RNA"
+    "SRR24516464 R7_RNA"
+    "SRR24413065 HP126_DNA"
+    "SRR24413071 R7_DNA"
+)
+
+# Check GFF
+log "STEP 1: verify annotation ${GFF}"
+[[ -f "${GFF}" ]] || error "GFF not found: ${GFF}"
+
+STEP=2
+for LINE in "${SAMPLES[@]}"; do
+    read SAMPLE TAG <<< "$LINE"
+    BAM="${BAM_DIR}/${SAMPLE}_${TAG}.sorted.bam"
+    FC_OUT="${FC_DIR}/${SAMPLE}_${TAG}_fc.txt"
+    HT_OUT="${HT_DIR}/${SAMPLE}_${TAG}_htseq.txt"
+
+    [[ -f "${BAM}" ]] || error "BAM not found: ${BAM}"
+
+    # featureCounts with GFF3 + ID attribute
+    log "STEP ${STEP}: featureCounts for ${SAMPLE}"
+    featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 \
+        -a "${GFF}" -o "${FC_OUT}" "${BAM}"
+    [[ -f "${FC_OUT}" ]] || error "featureCounts failed: ${SAMPLE}"
+    STEP=$((STEP+1))
+
+    # HTSeq-count using ID attribute
+    log "STEP ${STEP}: HTSeq-count for ${SAMPLE}"
+    samtools sort -n "${BAM}" | \
+      htseq-count -f bam -r name -s yes \
+        --type=gene --idattr=ID - "${GFF}" > "${HT_OUT}"
+    [[ -f "${HT_OUT}" ]] || error "HTSeq-count failed: ${SAMPLE}"
+    STEP=$((STEP+1))
+done
+
+log "STEP ${STEP}: all read counting completed"
+log "featureCounts: ${FC_DIR}"
+log "HTSeq-count:  ${HT_DIR}"

@@ -1,0 +1,78 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -c 2
+#SBATCH --mem=32G
+#SBATCH -t 12:00:00
+#SBATCH -J bwa
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --mail-type=ALL
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/bwa_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/bwa_%j.err
+
+# Load modules
+module load bioinfo-tools
+module load bwa/0.7.18
+module load samtools
+
+# Define directories
+WORK_DIR="/home/marziehh/Genom-Analysis"
+REF_GENOME="${WORK_DIR}/results/polishing/pilon_r7/polished_r7.fasta"
+OUTPUT_DIR="/proj/uppmax2025-3-3/GA_marziehh/bwa"
+FIXED_REF="${WORK_DIR}/results/polishing/pilon_r7/fixed_reference.fasta"
+
+# Create fixed reference with matching contig names
+echo "Fixing contig names in reference to match GFF..."
+sed 's/^>contig_1_pilon/>gnl|Prokka|EBONDDJH_1/' "${REF_GENOME}" | \
+sed 's/^>contig_3_pilon/>gnl|Prokka|EBONDDJH_2/' > "${FIXED_REF}"
+echo "Fixed reference created at: ${FIXED_REF}"
+
+# Use fixed reference
+REF_GENOME="${FIXED_REF}"
+
+# Index the reference genome if not indexed
+if [ ! -e "${REF_GENOME}.bwt" ]; then
+    bwa index "${REF_GENOME}"
+fi
+
+# Make output directory
+mkdir -p "${OUTPUT_DIR}"
+
+# Sample list: SAMPLE_ID  INPUT_FOLDER     TAG
+SAMPLES=(
+    "SRR24516459 ${WORK_DIR}/data/rna/hp126 HP126_RNA"
+    "SRR24516460 ${WORK_DIR}/data/rna/hp126 HP126_RNA"
+    "SRR24516461 ${WORK_DIR}/data/rna/hp126 HP126_RNA"
+    "SRR24516462 ${WORK_DIR}/data/rna/r7 R7_RNA"
+    "SRR24516463 ${WORK_DIR}/data/rna/r7 R7_RNA"
+    "SRR24516464 ${WORK_DIR}/data/rna/r7 R7_RNA"
+    "SRR24413065 ${WORK_DIR}/data/dna/hp126/short_read HP126_DNA"
+    "SRR24413071 ${WORK_DIR}/data/dna/r7/short_read R7_DNA"
+)
+
+# Align each sample
+for LINE in "${SAMPLES[@]}"; do
+    set -- $LINE
+    SAMPLE=$1
+    INPUT_DIR=$2
+    TAG=$3
+
+    READ1="${INPUT_DIR}/${SAMPLE}_1.fastq.gz"
+    READ2="${INPUT_DIR}/${SAMPLE}_2.fastq.gz"
+    SAM_FILE="${OUTPUT_DIR}/${SAMPLE}_${TAG}.sam"
+    BAM_FILE="${OUTPUT_DIR}/${SAMPLE}_${TAG}.sorted.bam"
+
+    echo "Processing sample: ${SAMPLE}"
+
+    bwa mem -t 2 "${REF_GENOME}" "${READ1}" "${READ2}" > "${SAM_FILE}"
+    samtools view -Sb "${SAM_FILE}" -o "${BAM_FILE}.unsorted.bam"
+    samtools sort "${BAM_FILE}.unsorted.bam" -o "${BAM_FILE}"
+    samtools index "${BAM_FILE}"
+    rm -f "${BAM_FILE}.unsorted.bam"
+
+    echo "Finished: ${SAMPLE}"
+done
+
+echo "✅ All samples mapped successfully using BWA!"

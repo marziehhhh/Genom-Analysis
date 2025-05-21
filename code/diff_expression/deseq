@@ -1,0 +1,120 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2025-3-3          
+#SBATCH -M snowy                   
+#SBATCH -p core                    
+#SBATCH -n 2                       
+#SBATCH --mem=16G                  
+#SBATCH -t 2:00:00                 
+#SBATCH -J DESeq            
+#SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --mail-type=END,FAIL       
+#SBATCH --output=/home/marziehh/Genom-Analysis/out/DESeq_%j.out
+#SBATCH --error=/home/marziehh/Genom-Analysis/out/DESeq_%j.err
+
+
+log () {
+    # print a message with timestamp to stderr
+    printf '[%(%F %T)T] %s\n' -1 "$*" >&2
+}
+
+# ---------- 1. Load R environment ----------
+log "Loading R module"
+module load bioinfo-tools 
+module load R/4.3.1
+module load R_packages/4.3.1
+
+# ---------- 2. Paths ----------
+DATA_DIR=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts
+log "Changing to data directory: $DATA_DIR"
+cd "${DATA_DIR}"
+
+# ---------- 3. Sample table (HTSeq filenames → condition) ----------
+log "Creating sample_table.txt"
+cat > sample_table.txt <<'TABLE'
+sampleName	fileName	condition
+HP126_1	SRR24516459_HP126_RNA_htseq.txt	HP126
+HP126_2	SRR24516460_HP126_RNA_htseq.txt	HP126
+HP126_3	SRR24516461_HP126_RNA_htseq.txt	HP126
+R7_1	SRR24516462_R7_RNA_htseq.txt	R7
+R7_2	SRR24516463_R7_RNA_htseq.txt	R7
+R7_3	SRR24516464_R7_RNA_htseq.txt	R7
+TABLE
+
+# ---------- 4. R script that does DESeq2 + plots ----------
+log "Writing deseq2_plots.R"
+cat > deseq2_plots.R <<'RSCRIPT'
+##############################################################################
+## Paper 2 – Differential expression (DESeq2) – PCA • MA • Heat‑map        ##
+##############################################################################
+suppressPackageStartupMessages({
+  library(DESeq2)
+  library(pheatmap)
+  library(EnhancedVolcano)
+})
+
+message("[DESeq2] Reading sample table")
+dir      <- "."                                    # current folder
+samples  <- read.table(file.path(dir,"sample_table.txt"), header=TRUE)
+
+message("[DESeq2] Creating DESeqDataSet")
+dds <- DESeqDataSetFromHTSeqCount(sampleTable = samples,
+                                  directory    = dir,
+                                  design       = ~ condition)
+dds <- dds[rowSums(counts(dds)) > 10 , ]          # filter low‑count genes
+
+message("[DESeq2] Running DESeq()")
+dds <- DESeq(dds)
+
+message("[DESeq2] Extracting results")
+res <- results(dds, alpha = 0.05)
+write.csv(as.data.frame(res), "deseq2_results.csv")
+
+## 1) PCA
+message("[DESeq2] Plotting PCA")
+rld <- rlog(dds, blind = FALSE)
+png("plot_PCA.png", 2000, 1800, res = 200)
+print(plotPCA(rld, intgroup = "condition") + ggtitle("PCA – HP126 vs R7"))
+dev.off()
+
+## 2) MA plot  (toggle doVolcano = TRUE for volcano instead)
+message("[DESeq2] Plotting MA")
+doVolcano <- FALSE
+if (doVolcano) {
+  png("plot_volcano.png", 2000, 1800, res = 200)
+  print(EnhancedVolcano(res,
+        lab = rownames(res), x = "log2FoldChange", y = "padj",
+        pCutoff = 0.05, FCcutoff = 1,
+        title = "Volcano – HP126 vs R7"))
+  dev.off()
+} else {
+  png("plot_MA.png", 2000, 1800, res = 200)
+  plotMA(res, ylim = c(-6, 6)); title("MA plot – HP126 vs R7")
+  dev.off()
+}
+
+## 3) Heat‑map of top‑50 DE genes
+message("[DESeq2] Plotting heat‑map")
+top <- head(order(res$padj), 50)
+mat <- assay(rld)[top, ] - rowMeans(assay(rld)[top, ])
+anno <- data.frame(condition = colData(dds)$condition)
+png("heatmap_top50.png", 2000, 2400, res = 200)
+pheatmap(mat, annotation_col = anno, fontsize_row = 6,
+         main = "Top‑50 differentially expressed genes")
+dev.off()
+message("[DESeq2] All plots done")
+##############################################################################
+RSCRIPT
+
+# ---------- 5. Run the R script ----------
+log "Starting DESeq2 analysis"
+Rscript deseq2_plots.R
+log "DESeq2 finished"
+
+echo "DESeq2 finished. Results:"
+echo "  - deseq2_results.csv"
+echo "  - plot_PCA.png"
+echo "  - plot_MA.png  (or plot_volcano.png)"
+echo "  - heatmap_top50.png"
+
+log "Generated files: deseq2_results.csv, plot_PCA.png, plot_MA.png, heatmap_top50.png"
+

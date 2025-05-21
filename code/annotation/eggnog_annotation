@@ -1,86 +1,51 @@
 #!/bin/bash -l
-
 #SBATCH -A uppmax2025-3-3
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH -n 1
-#SBATCH -c 4
-#SBATCH -t 15:00:00
+#SBATCH -n 16
+#SBATCH --mem=64G
+#SBATCH -t 30:00:00
 #SBATCH -J eggnog_annotation
-#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=marzieh.rahnama86@gmail.com
+#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --output=/home/marziehh/Genom-Analysis/out/eggnog_annotation_%j.out
 #SBATCH --error=/home/marziehh/Genom-Analysis/out/eggnog_annotation_%j.err
-#SBATCH --mem=16G
 
-# Load required modules
-module load bioinfo-tools eggNOG-mapper/2.1.9 hmmer
+module load bioinfo-tools
+module load eggNOG-mapper/2.1.9
 
-# Define directories
-WORK_DIR="/home/marziehh/Genom-Analysis"
-PROKKA_DIR="${WORK_DIR}/results/annotation"
-PILON_DIR="${WORK_DIR}/results/polishing"
-EGGNOG_DIR="${WORK_DIR}/results/eggnog"
+INPUT_BASE=/home/marziehh/Genom-Analysis/results/annotation
+OUTPUT_BASE=/proj/uppmax2025-3-3/GA_marziehh/eggnog_results
 
-# Create output directory
-mkdir -p "$EGGNOG_DIR"
-
-echo "Starting eggNOG annotation at $(date)"
-
-# Process each strain
 for strain in r7 hp126; do
-    echo "Processing strain: ${strain}"
+    echo "Processing $strain"
 
-    # 1. DIAMOND mode - Uses protein sequences from Prokka
-    echo "  Running DIAMOND annotation for ${strain}..."
-    faa="${PROKKA_DIR}/prokka_${strain}/${strain}_annotation.faa"
-    gff="${PROKKA_DIR}/prokka_${strain}/${strain}_annotation.gff"
-    out_diamond="${EGGNOG_DIR}/diamond_${strain}"
-    mkdir -p "$out_diamond"
+    INPUT_DIR="${INPUT_BASE}/prokka_${strain}"
+    OUTPUT_DIR="${OUTPUT_BASE}/${strain}_diamond"
+    mkdir -p "$OUTPUT_DIR"
 
-    if [[ -f "$faa" && -f "$gff" ]]; then
+    FAA_FILE="${INPUT_DIR}/${strain}_annotation.faa"
+    CLEAN_GFF_FILE="${INPUT_DIR}/${strain}_annotation_clean.gff"
+
+    if [[ -f "$FAA_FILE" && -f "$CLEAN_GFF_FILE" ]]; then
         emapper.py \
-            -i "$faa" \
+            -i "$FAA_FILE" \
             --itype proteins \
             -m diamond \
-            --cpu 4 \
-            -o "eggnog_diamond_${strain}" \
-            --output_dir "$out_diamond" \
-            --decorate_gff "$gff" \
+            --cpu 16 \
+            -o ${strain}_eggnog_results \
+            --output_dir "$OUTPUT_DIR" \
+            --decorate_gff "$CLEAN_GFF_FILE" \
             --decorate_gff_ID_field ID \
             --tax_scope bacteria \
             --excel \
             --override
-        echo "  DIAMOND annotation complete for ${strain}"
+
+        echo "Annotation completed for $strain"
     else
-        echo "  ERROR: Missing Prokka input files for ${strain}"
+        echo "Missing input for $strain"
     fi
-
-    # 2. HMMER mode - Uses genome sequence and Prodigal
-    echo "  Running HMMER annotation for ${strain}..."
-    polished="${PILON_DIR}/pilon_${strain}/polished_${strain}.fasta"
-    out_hmmer="${EGGNOG_DIR}/hmmer_${strain}"
-    mkdir -p "$out_hmmer"
-
-    if [[ -f "$polished" ]]; then
-        emapper.py \
-            -i "$polished" \
-            --itype genome \
-            --genepred prodigal \
-            -m hmmer \
-            --cpu 4 \
-            -o "eggnog_hmmer_${strain}" \
-            --output_dir "$out_hmmer" \
-            --tax_scope bacteria \
-            --dbmem \
-            --override
-        echo "  HMMER annotation complete for ${strain}"
-    else
-        echo "  ERROR: Missing polished genome for ${strain}"
-    fi
-
-    echo "Completed processing for strain: ${strain}"
-    echo "----------------------------------------"
 done
 
-echo "All eggNOG annotation runs completed at $(date)"
+echo "All annotations done at $(date)"
+
