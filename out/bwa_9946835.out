@@ -1,0 +1,19 @@
+Fixing contig names in reference to match GFF...
+Fixed reference created at: /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/fixed_reference.fasta
+Processing sample: SRR24516459
+Finished: SRR24516459
+Processing sample: SRR24516460
+Finished: SRR24516460
+Processing sample: SRR24516461
+Finished: SRR24516461
+Processing sample: SRR24516462
+Finished: SRR24516462
+Processing sample: SRR24516463
+Finished: SRR24516463
+Processing sample: SRR24516464
+Finished: SRR24516464
+Processing sample: SRR24413065
+Finished: SRR24413065
+Processing sample: SRR24413071
+Finished: SRR24413071
+✅ All samples mapped successfully using BWA!

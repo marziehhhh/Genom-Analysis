@@ -1,0 +1,524 @@
+Loading required modules...
+Modules loaded.
+Creating local Augustus config...
+Copying Augustus config directory to current directory...adjusting permissions...updating AUGUSTUS_CONFIG_PATH...done
+export AUGUSTUS_CONFIG_PATH=/home/marziehh/Genom-Analysis/code/evaluation_post_polish/augustus_config
+AUGUSTUS_CONFIG_PATH is set to: /home/marziehh/Genom-Analysis/code/evaluation_post_polish/augustus_config
+Local Augustus species contents: total 688
+drwxrwsr-x 169 marziehh marziehh 16384 Jan 24  2024 .
+drwxrwsr-x   9 marziehh marziehh  4096 Apr 16 14:01 ..
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 adorsata
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 aedes
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 amphimedon
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 ancylostoma_ceylanicum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 anidulans
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Anopheles_gambiae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 arabidopsis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Argopecten_irradians
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 aspergillus_fumigatus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 aspergillus_nidulans
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 aspergillus_oryzae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 aspergillus_terreus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Aurelia_aurita
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Bathycoccus_prasinos
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Berviolum_minutum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 bombus_impatiens1
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 bombus_terrestris2
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 botrytis_cinerea
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 b_pseudomallei
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Branchiostoma_floridae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 brugia
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 cacao
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 caenorhabditis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 camponotus_floridanus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 candida_albicans
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 candida_guilliermondii
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 candida_tropicalis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Cassiopea_xamachana
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 c_elegans_trsk
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 chaetomium_globosum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 chicken
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 chiloscyllium
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 chlamy2011
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 chlamydomonas
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Chlamydomonas_eustigma
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 chlorella
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Chloropicon_primus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Chrysaora_chesapeakei
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 ciona
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 coccidioides_immitis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Conidiobolus_coronatus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 coprinus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 coprinus_cinereus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 coyote_tobacco
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 cryptococcus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 cryptococcus_neoformans_gattii
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 cryptococcus_neoformans_neoformans_B
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 cryptococcus_neoformans_neoformans_JEC21
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Cryptosporidium_hominis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 culex
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Cyclotella_cryptica
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 debaryomyces_hansenii
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Dermasterias_imbricata
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Dunaliella_salina
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 E_coli_K12
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Ectocarpus_siliculosus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 elephant_shark
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Encephalitozoon_cuniculi
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 encephalitozoon_cuniculi_GB
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 eremothecium_gossypii
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Fistulifera_solaris
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 fly
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 fly_exp
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Fragilariopsis_cylindrus_CCMP1102
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 fusarium
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 fusarium_graminearum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 galdieria
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 generic
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 gigaspora_margarita
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Gonapodya_prolifera
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 heliconius_melpomene1
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 histoplasma
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 histoplasma_capsulatum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 honeybee1
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 human
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Hydra_vulgaris
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 hymenolepis_microstoma
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 japaneselamprey
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 kluyveromyces_lactis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 laccaria_bicolor
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 leishmania_tarentolae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Leptasterias_sp
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Loa_loa
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 lodderomyces_elongisporus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 magnaporthe_grisea
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 maize
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 maize5
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 mesotaenium_endlicherianum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Micromonas_commoda
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Micromonas_pusilla
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 mnemiopsis_leidyi
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Monoraphidium_neglectum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Monosiga_brevicollis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Naegleria_gruberi
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 nasonia
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 nematostella_vectensis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Nemopilema_nomurai
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 neurospora
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 neurospora_crassa
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Notospermus_geniculatus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Ostreococcus_sp_lucimarinus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Ostreococcus_tauri
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Paramecium_tetraurelia
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 parasteatoda
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 pchrysosporium
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 pea_aphid
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Pediculus_humanus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Perkinsus_marinus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 pfalciparum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Phaeodactylum_tricornutum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 phanerochaete_chrysosporium
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Physcomitrium_patens
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 pichia_stipitis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 pisaster
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 pneumocystis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Populus_trichocarpa
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Pseudo-nitzschia_multistriata
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Ptychodera_flava
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Pycnopodia_helianthoides
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Raphidocelis_subcapitata
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 rhincodon
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 rhizopus_oryzae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 rhodnius
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Rhopilema_esculentum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 rice
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Ricinus_communis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 saccharomyces
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 saccharomyces_cerevisiae_rm11-1a_1
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 saccharomyces_cerevisiae_S288C
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 s_aureus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 schistosoma
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 schistosoma2
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 schizosaccharomyces_pombe
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Sclerotinia_sclerotiorum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 scyliorhinus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 sealamprey
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Skeletonema_costatum
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Sordaria_macrospora
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Sphaceloma_murrayae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 s_pneumoniae
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 strongylocentrotus_purpuratus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 sulfolobus_solfataricus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 sunflower
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Taeniopygia_guttata
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 template_prokaryotic
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 tetrahymena
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Thalassiosira_pseudonana_CCMP1335
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 thermoanaerobacter_tengcongensis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 tomato
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 toxoplasma
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 tribolium2012
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 trichinella
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Trichoplax_adhaerens
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Trypanosoma_cruzi
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 ustilago
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 ustilago_maydis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 verticillium_albo_atrum1
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 verticillium_longisporum1
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Vitis_vinifera
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Vitrella_brassicaformis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 volvox
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 wheat
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Xenopus_tropicalis
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Xiphophorus_maculatus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 Xipophorus_maculatus
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 yarrowia_lipolytica
+drwxrwsr-x   2 marziehh marziehh  4096 Jan 24  2024 zebrafish
+Using BUSCO lineage: streptomycetales_odb10
+Starting assembly evaluation for strains: hp126 and r7
+/sw/bioinfo/quast/5.0.2/snowy/bin/quast.py /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta -r /home/marziehh/Genom-Analysis/data/references/HP126_genome.fasta -o /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126 --threads 4 --glimmer --large
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.119.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2025-04-17 13:19:34
+
+Logging to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/quast.log
+
+CWD: /domus/h1/marziehh/Genom-Analysis/code/evaluation_post_polish
+Main parameters: 
+  MODE: large, threads: 4, eukaryotic: true, minimum contig length: 3000, minimum alignment length: 500, \
+  ambiguity: one, threshold for extensive misassembly size: 7000
+
+Reference:
+  /home/marziehh/Genom-Analysis/data/references/HP126_genome.fasta ==> HP126_genome
+
+Contigs:
+  Pre-processing...
+  /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta ==> polished_hp126
+
+2025-04-17 13:19:37
+Running Basic statistics processor...
+  Reference genome:
+    HP126_genome.fasta, length = 9619655, num fragments = 2, GC % = 71.93
+  Contig files: 
+    polished_hp126
+  Calculating N50 and L50...
+    polished_hp126, N50 = 6995913, L50 = 1, Total length = 8771882, GC % = 72.00, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/basic_stats/GC_content_plot.pdf
+  Drawing polished_hp126 GC content plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/basic_stats/polished_hp126_GC_content_plot.pdf
+Done.
+
+2025-04-17 13:19:41
+Running Contig analyzer...
+  polished_hp126
+  Logging to files /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/contigs_reports/contigs_report_polished_hp126.stdout and contigs_report_polished_hp126.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2025-04-17 13:19:47
+Running NA-NGA calculation...
+  polished_hp126, Largest alignment = 6993493, NA50 = 6993493, NGA50 = 6993493, LA50 = 1, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/aligned_stats/NGAx_plot.pdf
+Done.
+
+2025-04-17 13:19:48
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  polished_hp126
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+2025-04-17 13:19:50
+Running GlimmerHMM...
+  polished_hp126
+    Genes = 7471 unique, 7523 total
+    Predicted genes (GFF): /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/predicted_genes/polished_hp126_glimmer_genes.gff.gz
+Done.
+
+2025-04-17 13:20:29
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2025-04-17 13:20:31
+RESULTS:
+  Text versions of total report are saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/report.html
+  PDF version (tables and plots) is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/report.pdf
+  Icarus (contig browser) is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/icarus.html
+  Log is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/quast.log
+
+Finished: 2025-04-17 13:20:31
+Elapsed time: 0:00:56.491359
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+QUAST completed for hp126. See /home/marziehh/Genom-Analysis/results/evaluation/quast_hp126/report.txt
+2025-04-17 13:20:34 INFO:	***** Start a BUSCO v5.7.1 analysis, current time: 04/17/2025 13:20:34 *****
+2025-04-17 13:20:34 INFO:	Configuring BUSCO with /sw/bioinfo/BUSCO/5.7.1/snowy/config.ini
+2025-04-17 13:20:34 INFO:	Running genome mode
+2025-04-17 13:20:34 INFO:	Input file is /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+2025-04-17 13:20:34 INFO:	Using local lineages directory /sw/bioinfo/BUSCO/v5_lineage_sets/lineages/streptomycetales_odb10
+2025-04-17 13:20:36 INFO:	Running BUSCO using lineage dataset streptomycetales_odb10 (prokaryota, 2024-01-08)
+2025-04-17 13:20:36 INFO:	Running 1 job(s) on bbtools, starting at 04/17/2025 13:20:36
+2025-04-17 13:20:38 INFO:	[bbtools]	1 of 1 task(s) completed
+2025-04-17 13:20:38 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2025-04-17 13:20:38 INFO:	Running Prodigal with genetic code 11 in single mode
+2025-04-17 13:20:38 INFO:	Running 1 job(s) on prodigal, starting at 04/17/2025 13:20:38
+2025-04-17 13:21:01 INFO:	[prodigal]	1 of 1 task(s) completed
+2025-04-17 13:21:01 INFO:	Genetic code 11 selected as optimal
+2025-04-17 13:21:01 INFO:	***** Run HMMER on gene sequences *****
+2025-04-17 13:21:01 INFO:	Running 1579 job(s) on hmmsearch, starting at 04/17/2025 13:21:01
+2025-04-17 13:21:10 INFO:	[hmmsearch]	158 of 1579 task(s) completed
+2025-04-17 13:21:16 INFO:	[hmmsearch]	316 of 1579 task(s) completed
+2025-04-17 13:21:24 INFO:	[hmmsearch]	474 of 1579 task(s) completed
+2025-04-17 13:21:29 INFO:	[hmmsearch]	632 of 1579 task(s) completed
+2025-04-17 13:21:35 INFO:	[hmmsearch]	790 of 1579 task(s) completed
+2025-04-17 13:21:40 INFO:	[hmmsearch]	948 of 1579 task(s) completed
+2025-04-17 13:21:45 INFO:	[hmmsearch]	1106 of 1579 task(s) completed
+2025-04-17 13:21:49 INFO:	[hmmsearch]	1264 of 1579 task(s) completed
+2025-04-17 13:21:53 INFO:	[hmmsearch]	1422 of 1579 task(s) completed
+2025-04-17 13:22:01 INFO:	[hmmsearch]	1579 of 1579 task(s) completed
+2025-04-17 13:22:05 INFO:	Results:	C:98.7%[S:98.4%,D:0.3%],F:0.2%,M:1.1%,n:1579	   
+
+2025-04-17 13:22:08 INFO:	
+
+    ---------------------------------------------------
+    |Results from dataset streptomycetales_odb10       |
+    ---------------------------------------------------
+    |C:98.7%[S:98.4%,D:0.3%],F:0.2%,M:1.1%,n:1579      |
+    |1558    Complete BUSCOs (C)                       |
+    |1554    Complete and single-copy BUSCOs (S)       |
+    |4    Complete and duplicated BUSCOs (D)           |
+    |3    Fragmented BUSCOs (F)                        |
+    |18    Missing BUSCOs (M)                          |
+    |1579    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2025-04-17 13:22:08 INFO:	BUSCO analysis done. Total running time: 94 seconds
+2025-04-17 13:22:08 INFO:	Results written in /home/marziehh/Genom-Analysis/results/evaluation/busco_hp126/hp126
+2025-04-17 13:22:08 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2025-04-17 13:22:08 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2025-04-17 13:22:09 INFO:	****************** Start plot generation at 04/17/2025 13:22:09 ******************
+2025-04-17 13:22:09 INFO:	Load data ...
+2025-04-17 13:22:09 INFO:	Loaded hp126/short_summary.specific.streptomycetales_odb10.hp126.txt successfully
+2025-04-17 13:22:09 INFO:	Generate the R code ...
+2025-04-17 13:22:09 INFO:	Run the R code ...
+2025-04-17 13:22:10 WARNING:	Impossible to run R. The package ggplot2 does not seem to be installed. Please check your R installation. See also the --no_r option to avoid this message
+2025-04-17 13:22:10 INFO:	Plot generation done with WARNING(s). Total running time: 1.5934853553771973 seconds
+2025-04-17 13:22:10 INFO:	Results written in hp126/
+
+BUSCO plot generated at /home/marziehh/Genom-Analysis/results/evaluation/busco_hp126/busco_figure.png
+BUSCO completed for hp126. See /home/marziehh/Genom-Analysis/results/evaluation/busco_hp126/hp126/short_summary.txt
+gnuplot 4.6 patchlevel 2
+MUMmer completed for hp126_vs_ref. See /home/marziehh/Genom-Analysis/results/evaluation/mummer_hp126_vs_ref/hp126_vs_ref.png
+/sw/bioinfo/quast/5.0.2/snowy/bin/quast.py /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta -r /home/marziehh/Genom-Analysis/data/references/R7_genome.fasta -o /home/marziehh/Genom-Analysis/results/evaluation/quast_r7 --threads 4 --glimmer --large
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.119.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2025-04-17 13:22:27
+
+Logging to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/quast.log
+
+CWD: /domus/h1/marziehh/Genom-Analysis/results/evaluation/mummer_hp126_vs_ref
+Main parameters: 
+  MODE: large, threads: 4, eukaryotic: true, minimum contig length: 3000, minimum alignment length: 500, \
+  ambiguity: one, threshold for extensive misassembly size: 7000
+
+Reference:
+  /home/marziehh/Genom-Analysis/data/references/R7_genome.fasta ==> R7_genome
+
+Contigs:
+  Pre-processing...
+  /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta ==> polished_r7
+
+2025-04-17 13:22:29
+Running Basic statistics processor...
+  Reference genome:
+    R7_genome.fasta, length = 9660595, num fragments = 2, GC % = 71.88
+  Contig files: 
+    polished_r7
+  Calculating N50 and L50...
+    polished_r7, N50 = 9361223, L50 = 1, Total length = 9653795, GC % = 71.89, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/basic_stats/GC_content_plot.pdf
+  Drawing polished_r7 GC content plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/basic_stats/polished_r7_GC_content_plot.pdf
+Done.
+
+2025-04-17 13:22:32
+Running Contig analyzer...
+  polished_r7
+  Logging to files /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/contigs_reports/contigs_report_polished_r7.stdout and contigs_report_polished_r7.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2025-04-17 13:22:39
+Running NA-NGA calculation...
+  polished_r7, Largest alignment = 9361219, NA50 = 9361219, NGA50 = 9361219, LA50 = 1, LGA50 = 1
+  Drawing cumulative plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/aligned_stats/NGAx_plot.pdf
+Done.
+
+2025-04-17 13:22:40
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  polished_r7
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+2025-04-17 13:22:42
+Running GlimmerHMM...
+  polished_r7
+    Genes = 8307 unique, 8343 total
+    Predicted genes (GFF): /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/predicted_genes/polished_r7_glimmer_genes.gff.gz
+Done.
+
+2025-04-17 13:23:26
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2025-04-17 13:23:28
+RESULTS:
+  Text versions of total report are saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/report.html
+  PDF version (tables and plots) is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/report.pdf
+  Icarus (contig browser) is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/icarus.html
+  Log is saved to /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/quast.log
+
+Finished: 2025-04-17 13:23:28
+Elapsed time: 0:01:01.062938
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+QUAST completed for r7. See /home/marziehh/Genom-Analysis/results/evaluation/quast_r7/report.txt
+2025-04-17 13:23:29 INFO:	***** Start a BUSCO v5.7.1 analysis, current time: 04/17/2025 13:23:29 *****
+2025-04-17 13:23:29 INFO:	Configuring BUSCO with /sw/bioinfo/BUSCO/5.7.1/snowy/config.ini
+2025-04-17 13:23:29 INFO:	Running genome mode
+2025-04-17 13:23:29 INFO:	Input file is /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta
+2025-04-17 13:23:29 INFO:	Using local lineages directory /sw/bioinfo/BUSCO/v5_lineage_sets/lineages/streptomycetales_odb10
+2025-04-17 13:23:30 INFO:	Running BUSCO using lineage dataset streptomycetales_odb10 (prokaryota, 2024-01-08)
+2025-04-17 13:23:30 INFO:	Running 1 job(s) on bbtools, starting at 04/17/2025 13:23:30
+2025-04-17 13:23:31 INFO:	[bbtools]	1 of 1 task(s) completed
+2025-04-17 13:23:31 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2025-04-17 13:23:31 INFO:	Running Prodigal with genetic code 11 in single mode
+2025-04-17 13:23:31 INFO:	Running 1 job(s) on prodigal, starting at 04/17/2025 13:23:31
+2025-04-17 13:23:52 INFO:	[prodigal]	1 of 1 task(s) completed
+2025-04-17 13:23:52 INFO:	Genetic code 11 selected as optimal
+2025-04-17 13:23:52 INFO:	***** Run HMMER on gene sequences *****
+2025-04-17 13:23:52 INFO:	Running 1579 job(s) on hmmsearch, starting at 04/17/2025 13:23:52
+2025-04-17 13:24:01 INFO:	[hmmsearch]	158 of 1579 task(s) completed
+2025-04-17 13:24:08 INFO:	[hmmsearch]	316 of 1579 task(s) completed
+2025-04-17 13:24:15 INFO:	[hmmsearch]	474 of 1579 task(s) completed
+2025-04-17 13:24:21 INFO:	[hmmsearch]	632 of 1579 task(s) completed
+2025-04-17 13:24:27 INFO:	[hmmsearch]	790 of 1579 task(s) completed
+2025-04-17 13:24:32 INFO:	[hmmsearch]	948 of 1579 task(s) completed
+2025-04-17 13:24:37 INFO:	[hmmsearch]	1106 of 1579 task(s) completed
+2025-04-17 13:24:42 INFO:	[hmmsearch]	1264 of 1579 task(s) completed
+2025-04-17 13:24:45 INFO:	[hmmsearch]	1422 of 1579 task(s) completed
+2025-04-17 13:24:54 INFO:	[hmmsearch]	1579 of 1579 task(s) completed
+2025-04-17 13:24:57 INFO:	Results:	C:99.6%[S:99.3%,D:0.3%],F:0.2%,M:0.2%,n:1579	   
+
+2025-04-17 13:25:01 INFO:	
+
+    ---------------------------------------------------
+    |Results from dataset streptomycetales_odb10       |
+    ---------------------------------------------------
+    |C:99.6%[S:99.3%,D:0.3%],F:0.2%,M:0.2%,n:1579      |
+    |1573    Complete BUSCOs (C)                       |
+    |1568    Complete and single-copy BUSCOs (S)       |
+    |5    Complete and duplicated BUSCOs (D)           |
+    |3    Fragmented BUSCOs (F)                        |
+    |3    Missing BUSCOs (M)                           |
+    |1579    Total BUSCO groups searched               |
+    ---------------------------------------------------
+2025-04-17 13:25:01 INFO:	BUSCO analysis done. Total running time: 91 seconds
+2025-04-17 13:25:01 INFO:	Results written in /home/marziehh/Genom-Analysis/results/evaluation/busco_r7/r7
+2025-04-17 13:25:01 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2025-04-17 13:25:01 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2025-04-17 13:25:01 INFO:	****************** Start plot generation at 04/17/2025 13:25:01 ******************
+2025-04-17 13:25:01 INFO:	Load data ...
+2025-04-17 13:25:01 INFO:	Loaded r7/short_summary.specific.streptomycetales_odb10.r7.txt successfully
+2025-04-17 13:25:01 INFO:	Generate the R code ...
+2025-04-17 13:25:01 INFO:	Run the R code ...
+2025-04-17 13:25:02 WARNING:	Impossible to run R. The package ggplot2 does not seem to be installed. Please check your R installation. See also the --no_r option to avoid this message
+2025-04-17 13:25:02 INFO:	Plot generation done with WARNING(s). Total running time: 0.6771700382232666 seconds
+2025-04-17 13:25:02 INFO:	Results written in r7/
+
+BUSCO plot generated at /home/marziehh/Genom-Analysis/results/evaluation/busco_r7/busco_figure.png
+BUSCO completed for r7. See /home/marziehh/Genom-Analysis/results/evaluation/busco_r7/r7/short_summary.txt
+gnuplot 4.6 patchlevel 2
+MUMmer completed for r7_vs_ref. See /home/marziehh/Genom-Analysis/results/evaluation/mummer_r7_vs_ref/r7_vs_ref.png
+gnuplot 4.6 patchlevel 2
+MUMmer completed for hp126_vs_r7. See /home/marziehh/Genom-Analysis/results/evaluation/mummer_hp126_vs_r7/hp126_vs_r7.png
+Note: For detailed rearrangement analysis between hp126 and r7, consider using ACT separately.
+All analyses completed.

@@ -1,0 +1,16 @@
+🔧 Creating BLAST database from R7 genome...
+
+
+Building a new DB, current time: 05/20/2025 15:11:26
+New DB name:   /domus/h1/marziehh/Genom-Analysis/results/blast/r7_db
+New DB title:  /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /domus/h1/marziehh/Genom-Analysis/results/blast/r7_db
+Keep MBits: T
+Maximum file size: 3000000000B
+Adding sequences from FASTA; added 2 sequences in 0.233568 seconds.
+
+
+🚀 Running BLASTN comparison...
+✅ BLASTN comparison complete!
+📄 Results saved to: /home/marziehh/Genom-Analysis/results/blast/HP126_vs_R7_blastn.tsv

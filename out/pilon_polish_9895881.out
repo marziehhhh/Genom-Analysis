@@ -1,0 +1,289 @@
+Loaded modules: 
+Working directory: /home/marziehh/Genom-Analysis
+Starting genome polishing...
+Polishing directory for hp126: /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126
+Checking input files for hp126...
+Draft assembly: /home/marziehh/Genom-Analysis/results/assembly/flye_hp126/assembly.fasta
+Paired reads: /home/marziehh/Genom-Analysis/results/trimmed/trimmed_dna_short/hp126/SRR24413065_1_trimmed.fastq.gz /home/marziehh/Genom-Analysis/results/trimmed/trimmed_dna_short/hp126/SRR24413065_2_trimmed.fastq.gz
+Indexing draft assembly for hp126...
+Mapping paired-end reads for hp126 (reads ID: SRR24413065)...
+Indexing BAM file for hp126...
+BAM file created: /home/marziehh/Genom-Analysis/results/mapping/hp126/hp126_paired.bam
+Running Pilon for hp126 at Tue Apr 15 14:28:51 CEST 2025...
+Pilon version 1.24 Thu Jan 28 13:00:45 2021 -0500
+--threads argument no longer supported; ignoring!
+Genome: /home/marziehh/Genom-Analysis/results/assembly/flye_hp126/assembly.fasta
+Fixing snps, indels, gaps, local
+Input genome size: 8766745
+Scanning BAMs
+/home/marziehh/Genom-Analysis/results/mapping/hp126/hp126_paired.bam: 1870235 reads, 0 filtered, 1870179 mapped, 1868915 proper, 1072 stray, FR 100% 407+/-88, max 671
+Processing contig_1:1-6991808
+frags /home/marziehh/Genom-Analysis/results/mapping/hp126/hp126_paired.bam: coverage 45
+Total Reads: 1332557, Coverage: 45, minDepth: 5
+Confirmed 6969925 of 6991808 bases (99.69%)
+Corrected 44 snps; 0 ambiguous bases; corrected 3968 small insertions totaling 4099 bases, 8 small deletions totaling 8 bases
+# Attempting to fix local continuity breaks
+# fix break: contig_1:5941-6249 0 -0 +0 NoSolution
+# fix break: contig_1:6836-10355 0 -0 +0 NoSolution
+# fix break: contig_1:10845-11022 0 -0 +0 NoSolution
+# fix break: contig_1:13659-13826 0 -0 +0 NoSolution
+# fix break: contig_1:40794-40800 0 -0 +0 NoSolution
+# fix break: contig_1:199221-199384 0 -0 +0 NoSolution
+# fix break: contig_1:320264-320285 0 -0 +0 NoSolution
+# fix break: contig_1:364951-365024 0 -0 +0 NoSolution
+fix break: contig_1:417184-417189 417195 -306 +311 BreakFix
+# fix break: contig_1:601302-601344 0 -0 +0 NoSolution
+# fix break: contig_1:853882-853964 0 -0 +0 NoSolution
+# fix break: contig_1:1147565-1147636 0 -0 +0 NoSolution
+# fix break: contig_1:1151094-1151301 0 -0 +0 NoSolution
+# fix break: contig_1:1219201-1219235 0 -0 +0 NoSolution TandemRepeat 24
+# fix break: contig_1:1327875-1328180 0 -0 +0 NoSolution TandemRepeat 90
+# fix break: contig_1:1328739-1329235 0 -0 +0 NoSolution
+# fix break: contig_1:1414502-1414562 0 -0 +0 NoSolution
+# fix break: contig_1:1415943-1416041 0 -0 +0 NoSolution
+# fix break: contig_1:1443373-1443575 0 -0 +0 NoSolution
+# fix break: contig_1:1552059-1552330 0 -0 +0 NoSolution
+# fix break: contig_1:1558774-1558778 0 -0 +0 NoSolution
+# fix break: contig_1:1675162-1675286 0 -0 +0 NoSolution
+# fix break: contig_1:1781618-1781770 0 -0 +0 NoSolution
+# fix break: contig_1:1920335-1920372 0 -0 +0 NoSolution
+# fix break: contig_1:2024420-2024670 0 -0 +0 NoSolution
+# fix break: contig_1:2025084-2025148 0 -0 +0 NoSolution
+# fix break: contig_1:2059712-2059735 0 -0 +0 NoSolution
+# fix break: contig_1:2356947-2356990 0 -0 +0 NoSolution
+# fix break: contig_1:2509016-2509062 0 -0 +0 NoSolution
+# fix break: contig_1:2624551-2624552 0 -0 +0 NoSolution TandemRepeat 431
+# fix break: contig_1:2624757-2625293 0 -0 +0 NoSolution
+# fix break: contig_1:2725594-2725656 0 -0 +0 NoSolution
+# fix break: contig_1:2784062-2784119 0 -0 +0 NoSolution
+# fix break: contig_1:2786893-2786897 0 -0 +0 NoSolution
+# fix break: contig_1:2791491-2791507 0 -0 +0 NoSolution
+# fix break: contig_1:2961414-2961590 0 -0 +0 NoSolution
+# fix break: contig_1:2963760-2963782 0 -0 +0 NoSolution
+# fix break: contig_1:3034996-3035000 0 -0 +0 NoSolution
+# fix break: contig_1:3086525-3086559 0 -0 +0 NoSolution
+# fix break: contig_1:3150509-3150706 0 -0 +0 NoSolution
+# fix break: contig_1:3151696-3151962 0 -0 +0 NoSolution
+# fix break: contig_1:3188393-3188620 0 -0 +0 NoSolution TandemRepeat 144
+# fix break: contig_1:3209795-3209932 0 -0 +0 NoSolution
+# fix break: contig_1:3257420-3257542 0 -0 +0 NoSolution
+# fix break: contig_1:3276081-3276146 0 -0 +0 NoSolution
+# fix break: contig_1:3327712-3327761 0 -0 +0 NoSolution
+# fix break: contig_1:3351488-3351623 0 -0 +0 NoSolution
+fix break: contig_1:3388809-3388812 3388809 -21 +24 BreakFix
+# fix break: contig_1:3534567-3534777 0 -0 +0 NoSolution
+# fix break: contig_1:3542171-3542274 0 -0 +0 NoSolution
+fix break: contig_1:3550116-3550117 3550079 -39 +41 BreakFix
+# fix break: contig_1:3896032-3896087 0 -0 +0 NoSolution
+# fix break: contig_1:3974969-3975150 0 -0 +0 NoSolution
+# fix break: contig_1:4229396-4229551 0 -0 +0 NoSolution
+# fix break: contig_1:4293657-4293768 0 -0 +0 NoSolution
+# fix break: contig_1:4365044-4365096 0 -0 +0 NoSolution
+# fix break: contig_1:4365599-4365899 0 -0 +0 NoSolution
+# fix break: contig_1:4401247-4401286 0 -0 +0 NoSolution
+# fix break: contig_1:4614914-4614988 0 -0 +0 NoSolution
+# fix break: contig_1:4634264-4634279 0 -0 +0 NoSolution
+fix break: contig_1:4693473-4693480 4693313 -196 +200 BreakFix
+# fix break: contig_1:4780577-4780881 0 -0 +0 NoSolution
+# fix break: contig_1:4874656-4874659 0 -0 +0 NoSolution
+# fix break: contig_1:4875790-4876836 0 -0 +0 NoSolution
+# fix break: contig_1:4877250-4877540 0 -0 +0 NoSolution
+# fix break: contig_1:4882969-4883064 0 -0 +0 NoSolution
+# fix break: contig_1:5132343-5132400 0 -0 +0 NoSolution
+# fix break: contig_1:5364737-5364822 0 -0 +0 NoSolution
+fix break: contig_1:5545885-5545887 5545756 -132 +135 BreakFix
+# fix break: contig_1:5785200-5785446 0 -0 +0 NoSolution
+# fix break: contig_1:5791042-5791107 0 -0 +0 NoSolution
+# fix break: contig_1:5870631-5870670 0 -0 +0 NoSolution
+# fix break: contig_1:5873690-5873812 0 -0 +0 NoSolution
+# fix break: contig_1:5922485-5922659 0 -0 +0 NoSolution
+# fix break: contig_1:5979557-5979626 0 -0 +0 NoSolution
+# fix break: contig_1:5981159-5981364 0 -0 +0 NoSolution
+# fix break: contig_1:6436959-6437117 0 -0 +0 NoSolution
+# fix break: contig_1:6482437-6482493 0 -0 +0 NoSolution
+# fix break: contig_1:6661932-6661961 0 -0 +0 NoSolution
+# fix break: contig_1:6706511-6706535 0 -0 +0 NoSolution
+# fix break: contig_1:6866128-6866205 0 -0 +0 NoSolution
+contig_1:1-6991808 log:
+Finished processing contig_1:1-6991808
+Processing contig_2:1-170366
+frags /home/marziehh/Genom-Analysis/results/mapping/hp126/hp126_paired.bam: coverage 67
+Total Reads: 48211, Coverage: 67, minDepth: 7
+Confirmed 169965 of 170366 bases (99.76%)
+Corrected 3 snps; 0 ambiguous bases; corrected 93 small insertions totaling 95 bases, 1 small deletions totaling 1 bases
+contig_2:1-170366 log:
+Finished processing contig_2:1-170366
+Processing contig_3:1-550785
+frags /home/marziehh/Genom-Analysis/results/mapping/hp126/hp126_paired.bam: coverage 109
+Total Reads: 253098, Coverage: 109, minDepth: 11
+Confirmed 548095 of 550785 bases (99.51%)
+Corrected 4 snps; 0 ambiguous bases; corrected 327 small insertions totaling 338 bases, 0 small deletions totaling 0 bases
+Large collapsed region: contig_3:1568-13810 size 12243
+Large collapsed region: contig_3:15994-46400 size 30407
+Large collapsed region: contig_3:49408-68113 size 18706
+Large collapsed region: contig_3:70127-84850 size 14724
+Large collapsed region: contig_3:124790-140443 size 15654
+Large collapsed region: contig_3:142861-169404 size 26544
+# Attempting to fix local continuity breaks
+# fix break: contig_3:310906-310971 0 -0 +0 NoSolution
+# fix break: contig_3:533991-534055 0 -0 +0 NoSolution
+# fix break: contig_3:537376-537474 0 -0 +0 NoSolution
+# fix break: contig_3:539156-539223 0 -0 +0 NoSolution
+# fix break: contig_3:542005-542139 0 -0 +0 NoSolution
+# fix break: contig_3:542890-543041 0 -0 +0 NoSolution
+# fix break: contig_3:544179-544258 0 -0 +0 NoSolution
+# fix break: contig_3:545214-545474 0 -0 +0 NoSolution
+contig_3:1-550785 log:
+Finished processing contig_3:1-550785
+Processing contig_4:1-1053786
+frags /home/marziehh/Genom-Analysis/results/mapping/hp126/hp126_paired.bam: coverage 53
+Total Reads: 236329, Coverage: 53, minDepth: 5
+Confirmed 1047952 of 1053786 bases (99.45%)
+Corrected 2 snps; 0 ambiguous bases; corrected 587 small insertions totaling 601 bases, 3 small deletions totaling 3 bases
+Large collapsed region: contig_4:913449-1053639 size 140191
+# Attempting to fix local continuity breaks
+# fix break: contig_4:4546-4612 0 -0 +0 NoSolution
+# fix break: contig_4:5367-5566 0 -0 +0 NoSolution
+# fix break: contig_4:5882-6080 0 -0 +0 NoSolution
+# fix break: contig_4:6500-6589 0 -0 +0 NoSolution
+# fix break: contig_4:7369-7460 0 -0 +0 NoSolution
+# fix break: contig_4:14289-14517 0 -0 +0 NoSolution
+# fix break: contig_4:16228-16404 0 -0 +0 NoSolution
+# fix break: contig_4:458175-458179 0 -0 +0 NoSolution TandemRepeat 8
+fix break: contig_4:699024-699026 699024 -332 +334 BreakFix
+# fix break: contig_4:912728-912786 0 -0 +0 NoSolution
+contig_4:1-1053786 log:
+Finished processing contig_4:1-1053786
+Writing contig_1:1-6991808 VCF to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.vcf
+Writing contig_1:1-6991808 changes to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.changes
+Writing updated contig_1_pilon to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+Writing contig_2:1-170366 VCF to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.vcf
+Writing contig_2:1-170366 changes to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.changes
+Writing updated contig_2_pilon to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+Writing contig_3:1-550785 VCF to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.vcf
+Writing contig_3:1-550785 changes to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.changes
+Writing updated contig_3_pilon to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+Writing contig_4:1-1053786 VCF to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.vcf
+Writing contig_4:1-1053786 changes to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.changes
+Writing updated contig_4_pilon to /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+Mean frags coverage: 50
+Mean total coverage: 50
+Polishing for hp126 completed: /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+-rw-rw-r-- 1 marziehh marziehh 8.5M Apr 15 14:32 /home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta
+Polishing directory for r7: /home/marziehh/Genom-Analysis/results/polishing/pilon_r7
+Checking input files for r7...
+Draft assembly: /home/marziehh/Genom-Analysis/results/assembly/flye_r7/assembly.fasta
+Paired reads: /home/marziehh/Genom-Analysis/results/trimmed/trimmed_dna_short/r7/SRR24413071_1_trimmed.fastq.gz /home/marziehh/Genom-Analysis/results/trimmed/trimmed_dna_short/r7/SRR24413071_2_trimmed.fastq.gz
+Indexing draft assembly for r7...
+Mapping paired-end reads for r7 (reads ID: SRR24413071)...
+Indexing BAM file for r7...
+BAM file created: /home/marziehh/Genom-Analysis/results/mapping/r7/r7_paired.bam
+Running Pilon for r7 at Tue Apr 15 14:34:09 CEST 2025...
+Pilon version 1.24 Thu Jan 28 13:00:45 2021 -0500
+--threads argument no longer supported; ignoring!
+Genome: /home/marziehh/Genom-Analysis/results/assembly/flye_r7/assembly.fasta
+Fixing snps, indels, gaps, local
+Input genome size: 9647712
+Scanning BAMs
+/home/marziehh/Genom-Analysis/results/mapping/r7/r7_paired.bam: 2196230 reads, 0 filtered, 2196219 mapped, 2194972 proper, 1078 stray, FR 100% 403+/-87, max 663
+Processing contig_1:1-292402
+frags /home/marziehh/Genom-Analysis/results/mapping/r7/r7_paired.bam: coverage 91
+Total Reads: 112472, Coverage: 91, minDepth: 9
+Confirmed 291834 of 292402 bases (99.81%)
+Corrected 1 snps; 0 ambiguous bases; corrected 159 small insertions totaling 166 bases, 1 small deletions totaling 1 bases
+# Attempting to fix local continuity breaks
+fix break: contig_1:41529-41532 41385 -148 +153 BreakFix
+contig_1:1-292402 log:
+Finished processing contig_1:1-292402
+Processing contig_3:1-9355310
+frags /home/marziehh/Genom-Analysis/results/mapping/r7/r7_paired.bam: coverage 52
+Total Reads: 2083758, Coverage: 52, minDepth: 5
+Confirmed 9341382 of 9355310 bases (99.85%)
+Corrected 65 snps; 0 ambiguous bases; corrected 5733 small insertions totaling 5924 bases, 16 small deletions totaling 17 bases
+# Attempting to fix local continuity breaks
+# fix break: contig_3:6873-6993 0 -0 +0 NoSolution
+# fix break: contig_3:7932-8018 0 -0 +0 NoSolution
+# fix break: contig_3:525894-525900 0 -0 +0 NoSolution
+# fix break: contig_3:575352-575397 0 -0 +0 NoSolution
+# fix break: contig_3:811653-811661 0 -0 +0 NoSolution
+# fix break: contig_3:1399428 0 -0 +0 NoSolution
+# fix break: contig_3:1633265-1633272 0 -0 +0 NoSolution
+# fix break: contig_3:1719592 0 -0 +0 NoSolution
+# fix break: contig_3:1793553-1793558 0 -0 +0 NoSolution
+# fix break: contig_3:2220618-2220764 0 -0 +0 NoSolution
+# fix break: contig_3:2222267-2222413 0 -0 +0 NoSolution
+# fix break: contig_3:2279318-2279478 0 -0 +0 NoSolution
+# fix break: contig_3:2328219-2328240 0 -0 +0 NoSolution
+# fix break: contig_3:2331343-2331374 0 -0 +0 NoSolution
+# fix break: contig_3:2334335-2334351 0 -0 +0 NoSolution
+# fix break: contig_3:2416617-2416751 0 -0 +0 NoSolution
+# fix break: contig_3:2837152-2837260 0 -0 +0 NoSolution
+# fix break: contig_3:3194636-3194656 0 -0 +0 NoSolution
+# fix break: contig_3:3318829-3318870 0 -0 +0 NoSolution
+# fix break: contig_3:3324314-3324581 0 -0 +0 NoSolution
+# fix break: contig_3:3325129-3326104 0 -0 +0 NoSolution
+# fix break: contig_3:3421021-3421409 0 -0 +0 NoSolution
+# fix break: contig_3:3563807-3563808 0 -0 +0 NoSolution
+# fix break: contig_3:3586870-3587002 0 -0 +0 NoSolution
+# fix break: contig_3:3600720-3600842 0 -0 +0 NoSolution
+# fix break: contig_3:3836185-3836245 0 -0 +0 NoSolution
+# fix break: contig_3:3836711-3836799 0 -0 +0 NoSolution
+# fix break: contig_3:3972266-3972386 0 -0 +0 NoSolution
+# fix break: contig_3:4071744-4071765 0 -0 +0 NoSolution
+# fix break: contig_3:4075687-4075694 0 -0 +0 NoSolution
+# fix break: contig_3:4250239-4250357 0 -0 +0 NoSolution
+# fix break: contig_3:4366695-4366719 0 -0 +0 NoSolution
+# fix break: contig_3:4376132-4376135 0 -0 +0 NoSolution
+# fix break: contig_3:4505744-4505746 0 -0 +0 NoSolution
+# fix break: contig_3:4690625-4690734 0 -0 +0 NoSolution
+# fix break: contig_3:4896652-4896775 0 -0 +0 NoSolution
+# fix break: contig_3:4920310-4920543 0 -0 +0 NoSolution
+# fix break: contig_3:4934279-4934399 0 -0 +0 NoSolution
+# fix break: contig_3:4972095-4972135 0 -0 +0 NoSolution
+# fix break: contig_3:4990697-4990810 0 -0 +0 NoSolution
+# fix break: contig_3:5038413-5038426 0 -0 +0 NoSolution
+# fix break: contig_3:5052909-5052953 0 -0 +0 NoSolution
+# fix break: contig_3:5059648-5059777 0 -0 +0 NoSolution TandemRepeat 144
+# fix break: contig_3:5095673-5095707 0 -0 +0 NoSolution
+# fix break: contig_3:5096236-5096597 0 -0 +0 NoSolution
+# fix break: contig_3:5102277-5102289 0 -0 +0 NoSolution
+# fix break: contig_3:5161687-5161762 0 -0 +0 NoSolution
+fix break: contig_3:5286805-5286821 5286566 -391 +395 BreakFix
+# fix break: contig_3:5522576-5522585 0 -0 +0 NoSolution
+# fix break: contig_3:5522821-5522981 0 -0 +0 NoSolution
+# fix break: contig_3:5582467-5582473 0 -0 +0 NoSolution
+# fix break: contig_3:5622930-5623470 0 -0 +0 NoSolution
+# fix break: contig_3:6266984-6267101 0 -0 +0 NoSolution
+# fix break: contig_3:6267518-6267708 0 -0 +0 NoSolution
+# fix break: contig_3:6510362-6510539 0 -0 +0 NoSolution
+# fix break: contig_3:6616769-6616962 0 -0 +0 NoSolution
+# fix break: contig_3:6739782-6740024 0 -0 +0 NoSolution
+# fix break: contig_3:6813686-6813697 0 -0 +0 NoSolution TandemRepeat 8
+# fix break: contig_3:6848537-6848694 0 -0 +0 NoSolution
+# fix break: contig_3:6962853-6963303 0 -0 +0 NoSolution
+# fix break: contig_3:6963944-6964005 0 -0 +0 NoSolution
+# fix break: contig_3:7072859-7072882 0 -0 +0 NoSolution TandemRepeat 24
+# fix break: contig_3:7140835-7140996 0 -0 +0 NoSolution
+# fix break: contig_3:7142606-7142621 0 -0 +0 NoSolution
+fix break: contig_3:7633164-7633172 7632841 -332 +334 BreakFix
+# fix break: contig_3:8484595-8484639 0 -0 +0 NoSolution
+# fix break: contig_3:8627729-8627769 0 -0 +0 NoSolution
+# fix break: contig_3:9044362-9044431 0 -0 +0 NoSolution
+# fix break: contig_3:9350759-9350889 0 -0 +0 NoSolution
+# fix break: contig_3:9352467-9352533 0 -0 +0 NoSolution
+# fix break: contig_3:9353329-9353425 0 -0 +0 NoSolution
+# fix break: contig_3:9354043-9354227 0 -0 +0 NoSolution
+contig_3:1-9355310 log:
+Finished processing contig_3:1-9355310
+Writing contig_1:1-292402 VCF to /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.vcf
+Writing contig_1:1-292402 changes to /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.changes
+Writing updated contig_1_pilon to /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta
+Writing contig_3:1-9355310 VCF to /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.vcf
+Writing contig_3:1-9355310 changes to /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.changes
+Writing updated contig_3_pilon to /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta
+Mean frags coverage: 53
+Mean total coverage: 53
+Polishing for r7 completed: /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta
+-rw-rw-r-- 1 marziehh marziehh 9.4M Apr 15 14:38 /home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta
+Genome polishing for HP126 and R7 completed successfully.
+Next step: Evaluate polished assemblies with QUAST

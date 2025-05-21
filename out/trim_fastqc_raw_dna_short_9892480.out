@@ -1,0 +1,20 @@
+trimmomatic/0.39 loaded, see 'module help trimmomatic/0.39' for more information.
+Processing SRR24413065...
+TrimmomaticPE: Started with arguments:
+ -phred33 data/dna/hp126/short_read/SRR24413065_1.fastq.gz data/dna/hp126/short_read/SRR24413065_2.fastq.gz results/trimmed/trimmed_dna_short/hp126/SRR24413065_1_trimmed.fastq.gz results/trimmed/trimmed_dna_short/hp126/SRR24413065_1_unpaired.fastq.gz results/trimmed/trimmed_dna_short/hp126/SRR24413065_2_trimmed.fastq.gz results/trimmed/trimmed_dna_short/hp126/SRR24413065_2_unpaired.fastq.gz ILLUMINACLIP:/sw/bioinfo/trimmomatic/0.39/snowy/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:150
+Multiple cores found: Using 2 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 1183170 Both Surviving: 934838 (79.01%) Forward Only Surviving: 178733 (15.11%) Reverse Only Surviving: 11521 (0.97%) Dropped: 58078 (4.91%)
+TrimmomaticPE: Completed successfully
+Finished processing SRR24413065.
+Processing SRR24413071...
+TrimmomaticPE: Started with arguments:
+ -phred33 data/dna/r7/short_read/SRR24413071_1.fastq.gz data/dna/r7/short_read/SRR24413071_2.fastq.gz results/trimmed/trimmed_dna_short/r7/SRR24413071_1_trimmed.fastq.gz results/trimmed/trimmed_dna_short/r7/SRR24413071_1_unpaired.fastq.gz results/trimmed/trimmed_dna_short/r7/SRR24413071_2_trimmed.fastq.gz results/trimmed/trimmed_dna_short/r7/SRR24413071_2_unpaired.fastq.gz ILLUMINACLIP:/sw/bioinfo/trimmomatic/0.39/snowy/adapters/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:150
+Multiple cores found: Using 2 threads
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 0 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 1433028 Both Surviving: 1097800 (76.61%) Forward Only Surviving: 247187 (17.25%) Reverse Only Surviving: 11811 (0.82%) Dropped: 76230 (5.32%)
+TrimmomaticPE: Completed successfully
+Finished processing SRR24413071.
+All RNA-seq samples have been trimmed.

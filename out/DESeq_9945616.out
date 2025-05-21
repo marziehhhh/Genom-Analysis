@@ -1,0 +1,5 @@
+DESeq2 finished. Results:
+  - deseq2_results.csv
+  - plot_PCA.png
+  - plot_MA.png  (or plot_volcano.png)
+  - heatmap_top50.png

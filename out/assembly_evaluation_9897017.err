@@ -1,0 +1,113 @@
+augustus/3.5.0-20231223-33fc04d: If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.5.0-20231223-33fc04d'
+The environment variable BUSCO_LINEAGE_SETS is set to a directory containing
+BUSCO v5 lineage sets.  Use with the -l option, for example:
+
+    busco -l $BUSCO_LINEAGE_SETS/fungi_odb10 ...
+
+A list of available lineage sets is provided via 'module help BUSCO/5.7.1'
+
+----
+If you see this error from BUSCO:
+
+    Error: Cannot write to Augustus directory, please make sure you have write permissions to <directory>
+
+then you need to create a local copy of the config directory from the augustus
+module with 'source $AUGUSTUS_CONFIG_COPY'.  See 'module help augustus/3.5.0-20231223-33fc04d'
+
+augustus/3.5.0-20231223-33fc04d: If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.5.0-20231223-33fc04d'
+1: PREPARING DATA
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "hp126_vs_ref.ntref" of length 9619657
+# construct suffix tree for sequence of length 9619657
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 96196 characters per dot
+#....................................................................................................
+# CONSTRUCTIONTIME /sw/bioinfo/MUMmer/3.23/rackham/mummer hp126_vs_ref.ntref 4.28
+# reading input file "/home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta" of length 8771885
+# matching query-file "/home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta"
+# against subject-file "hp126_vs_ref.ntref"
+# COMPLETETIME /sw/bioinfo/MUMmer/3.23/rackham/mummer hp126_vs_ref.ntref 11.26
+# SPACE /sw/bioinfo/MUMmer/3.23/rackham/mummer hp126_vs_ref.ntref 17.80
+4: FINISHING DATA
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 884.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 894.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 981.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 991.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 1034.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 1044.
+	(Maybe you should just omit the defined()?)
+Writing filtered delta file hp126_vs_ref.filter
+Reading delta file hp126_vs_ref.filter
+Writing plot files hp126_vs_ref.fplot, hp126_vs_ref.rplot
+Writing gnuplot script hp126_vs_ref.gp
+Rendering plot hp126_vs_ref.png
+1: PREPARING DATA
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "r7_vs_ref.ntref" of length 9660597
+# construct suffix tree for sequence of length 9660597
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 96605 characters per dot
+#....................................................................................................
+# CONSTRUCTIONTIME /sw/bioinfo/MUMmer/3.23/rackham/mummer r7_vs_ref.ntref 4.37
+# reading input file "/home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta" of length 9653796
+# matching query-file "/home/marziehh/Genom-Analysis/results/polishing/pilon_r7/polished_r7.fasta"
+# against subject-file "r7_vs_ref.ntref"
+# COMPLETETIME /sw/bioinfo/MUMmer/3.23/rackham/mummer r7_vs_ref.ntref 12.17
+# SPACE /sw/bioinfo/MUMmer/3.23/rackham/mummer r7_vs_ref.ntref 18.69
+4: FINISHING DATA
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 884.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 894.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 981.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 991.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 1034.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 1044.
+	(Maybe you should just omit the defined()?)
+Writing filtered delta file r7_vs_ref.filter
+Reading delta file r7_vs_ref.filter
+Writing plot files r7_vs_ref.fplot, r7_vs_ref.rplot
+Writing gnuplot script r7_vs_ref.gp
+Rendering plot r7_vs_ref.png
+1: PREPARING DATA
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "hp126_vs_r7.ntref" of length 9653797
+# construct suffix tree for sequence of length 9653797
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 96537 characters per dot
+#....................................................................................................
+# CONSTRUCTIONTIME /sw/bioinfo/MUMmer/3.23/rackham/mummer hp126_vs_r7.ntref 4.35
+# reading input file "/home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta" of length 8771885
+# matching query-file "/home/marziehh/Genom-Analysis/results/polishing/pilon_hp126/polished_hp126.fasta"
+# against subject-file "hp126_vs_r7.ntref"
+# COMPLETETIME /sw/bioinfo/MUMmer/3.23/rackham/mummer hp126_vs_r7.ntref 11.44
+# SPACE /sw/bioinfo/MUMmer/3.23/rackham/mummer hp126_vs_r7.ntref 17.83
+4: FINISHING DATA
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 884.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 894.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 981.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 991.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 1034.
+	(Maybe you should just omit the defined()?)
+defined(%hash) is deprecated at /sw/bioinfo/MUMmer/3.23/snowy/mummerplot line 1044.
+	(Maybe you should just omit the defined()?)
+Writing filtered delta file hp126_vs_r7.filter
+Reading delta file hp126_vs_r7.filter
+Writing plot files hp126_vs_r7.fplot, hp126_vs_r7.rplot
+Writing gnuplot script hp126_vs_r7.gp
+Rendering plot hp126_vs_r7.png

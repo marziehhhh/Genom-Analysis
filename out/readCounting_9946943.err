@@ -1,0 +1,1455 @@
++ log 'Loading modules'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:05:52] Loading modules'
+[2025-05-15 08:05:52] Loading modules
++ module load bioinfo-tools
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv;' export '_ModuleTable001_;' '_ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI;' export '_ModuleTable002_;' '_ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MODULEPATH='/sw/mf/snowy/bioinfo-tools/annotation:1;/sw/mf/snowy/bioinfo-tools/alignment:1;/sw/mf/snowy/bioinfo-tools/assembly:1;/sw/mf/snowy/bioinfo-tools/misc:1;/sw/mf/snowy/bioinfo-tools/phylogeny:1;/sw/mf/snowy/bioinfo-tools/pipelines:1;/sw/mf/snowy/bioinfo-tools/sw_collections:1;/sw/mf/snowy/applications:1;/sw/mf/snowy/build-tools:1;/sw/mf/snowy/compilers:1;/sw/mf/snowy/data:1;/sw/mf/snowy/environment:1;/sw/mf/snowy/libraries:1;/sw/mf/snowy/parallel:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI
+++ export _ModuleTable002_
+++ _ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load subread
+++ /usr/share/lmod/lmod/libexec/lmod bash load subread
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;subread/2.0.3:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:subread/2.0.3;' export 'LOADEDMODULES;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/subread/2.0.3/snowy/bin:1\;/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:1\;/home/marziehh/bin:2\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/puppetlabs/bin:1\;/opt/thinlinc/bin:1\;/opt/thinlinc/sbin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/subread/2.0.3/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:/home/marziehh/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/sw/uppmax/bin;' export 'PATH;' 'SUBREAD_ROOT=/sw/bioinfo/subread/2.0.3/snowy;' export 'SUBREAD_ROOT;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxzdWJyZWFkPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2Mvc3VicmVhZC8yLjAuMyIsWyJmdWxsTmFtZSJdPSJzdWJyZWFkLzIuMC4zIixb;' export '_ModuleTable001_;' '_ModuleTable002_=ImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic3VicmVhZCIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9h;' export '_ModuleTable002_;' '_ModuleTable003_=cHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;subread/2.0.3:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:subread/2.0.3
+++ export LOADEDMODULES
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/subread/2.0.3/snowy/bin:1;/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:1;/home/marziehh/bin:2;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/puppetlabs/bin:1;/opt/thinlinc/bin:1;/opt/thinlinc/sbin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/subread/2.0.3/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:/home/marziehh/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/sw/uppmax/bin
+++ export PATH
+++ SUBREAD_ROOT=/sw/bioinfo/subread/2.0.3/snowy
+++ export SUBREAD_ROOT
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxzdWJyZWFkPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2Mvc3VicmVhZC8yLjAuMyIsWyJmdWxsTmFtZSJdPSJzdWJyZWFkLzIuMC4zIixb
+++ export _ModuleTable001_
+++ _ModuleTable002_=ImxvYWRPcmRlciJdPTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic3VicmVhZCIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9h
+++ export _ModuleTable002_
+++ _ModuleTable003_=cHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load htseq/2.0.2
+++ /usr/share/lmod/lmod/libexec/lmod bash load htseq/2.0.2
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;subread/2.0.3:1\;htseq/2.0.2:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:subread/2.0.3:htseq/2.0.2;' export 'LOADEDMODULES;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/htseq/2.0.2/snowy/bin:1\;/sw/bioinfo/subread/2.0.3/snowy/bin:1\;/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:1\;/home/marziehh/bin:2\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/puppetlabs/bin:1\;/opt/thinlinc/bin:1\;/opt/thinlinc/sbin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/htseq/2.0.2/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:/home/marziehh/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:1\;/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxodHNlcT17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjL2h0c2VxLzIuMC4yIixbImZ1bGxOYW1lIl09Imh0c2VxLzIuMC4yIixbImxvYWRP;' export '_ModuleTable001_;' '_ModuleTable002_=cmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHRzZXEvMi4wLjIiLH0sc3VicmVhZD17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjL3N1YnJlYWQvMi4wLjMiLFsiZnVsbE5hbWUiXT0ic3VicmVhZC8yLjAuMyIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InN1YnJlYWQiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNz;' export '_ModuleTable002_;' '_ModuleTable003_=ZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29sbGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRp;' export '_ModuleTable003_;' '_ModuleTable004_=b25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==;' export '_ModuleTable004_;' '_ModuleTable_Sz_=4;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;subread/2.0.3:1;htseq/2.0.2:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:subread/2.0.3:htseq/2.0.2
+++ export LOADEDMODULES
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/htseq/2.0.2/snowy/bin:1;/sw/bioinfo/subread/2.0.3/snowy/bin:1;/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:1;/home/marziehh/bin:2;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/puppetlabs/bin:1;/opt/thinlinc/bin:1;/opt/thinlinc/sbin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/htseq/2.0.2/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:/home/marziehh/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:1;/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxodHNlcT17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjL2h0c2VxLzIuMC4yIixbImZ1bGxOYW1lIl09Imh0c2VxLzIuMC4yIixbImxvYWRP
+++ export _ModuleTable001_
+++ _ModuleTable002_=cmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHRzZXEvMi4wLjIiLH0sc3VicmVhZD17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjL3N1YnJlYWQvMi4wLjMiLFsiZnVsbE5hbWUiXT0ic3VicmVhZC8yLjAuMyIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InN1YnJlYWQiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNz
+++ export _ModuleTable002_
+++ _ModuleTable003_=ZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29sbGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRp
+++ export _ModuleTable003_
+++ _ModuleTable004_=b25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==
+++ export _ModuleTable004_
+++ _ModuleTable_Sz_=4
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load samtools/1.14
+++ /usr/share/lmod/lmod/libexec/lmod bash load samtools/1.14
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;subread/2.0.3:1\;htseq/2.0.2:1\;samtools/1.14:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:subread/2.0.3:htseq/2.0.2:samtools/1.14;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/sw/bioinfo/samtools/1.14/snowy/share/man:1\;/opt/puppetlabs/puppet/share/man:1\;/usr/share/man:2\;/sw/uppmax/man:2\;/opt/thinlinc/share/man:3;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/sw/bioinfo/samtools/1.14/snowy/share/man::/opt/puppetlabs/puppet/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man;' export 'MANPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/samtools/1.14/snowy/bin:1\;/sw/bioinfo/htseq/2.0.2/snowy/bin:1\;/sw/bioinfo/subread/2.0.3/snowy/bin:1\;/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:1\;/home/marziehh/bin:2\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/puppetlabs/bin:1\;/opt/thinlinc/bin:1\;/opt/thinlinc/sbin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/samtools/1.14/snowy/bin:/sw/bioinfo/htseq/2.0.2/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:/home/marziehh/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/sw/uppmax/bin;' export 'PATH;' 'SAMTOOLS_ROOT=/sw/bioinfo/samtools/1.14/snowy;' export 'SAMTOOLS_ROOT;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:1\;/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2:1\;/sw/mf/snowy/bioinfo-tools/misc/samtools/1.14:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2:/sw/mf/snowy/bioinfo-tools/misc/samtools/1.14;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxodHNlcT17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjL2h0c2VxLzIuMC4yIixbImZ1bGxOYW1lIl09Imh0c2VxLzIuMC4yIixbImxvYWRP;' export '_ModuleTable001_;' '_ModuleTable002_=cmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHRzZXEvMi4wLjIiLH0sc2FtdG9vbHM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9zYW10b29scy8xLjE0IixbImZ1bGxOYW1lIl09InNhbXRvb2xzLzEuMTQiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzYW10b29scy8xLjE0Iix9LHN1YnJlYWQ9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9zdWJyZWFkLzIuMC4zIixbImZ1bGxOYW1lIl09InN1YnJlYWQvMi4wLjMiLFsibG9hZE9yZGVyIl09Mixwcm9w;' export '_ModuleTable002_;' '_ModuleTable003_=VD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzdWJyZWFkIix9LH0sbXBhdGhBPXsiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYW5ub3RhdGlvbiIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2FsaWdubWVudCIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fzc2VtYmx5IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BoeWxvZ2VueSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BpcGVsaW5lcyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3N3X2NvbGxlY3Rpb25zIiwiL3N3L21mL3Nub3d5L2FwcGxpY2F0aW9ucyIsIi9zdy9t;' export '_ModuleTable003_;' '_ModuleTable004_=Zi9zbm93eS9idWlsZC10b29scyIsIi9zdy9tZi9zbm93eS9jb21waWxlcnMiLCIvc3cvbWYvc25vd3kvZGF0YSIsIi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudCIsIi9zdy9tZi9zbm93eS9saWJyYXJpZXMiLCIvc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3N3L21mL3Nub3d5L2FwcGxpY2F0aW9uczovc3cvbWYvc25vd3kvYnVpbGQtdG9vbHM6L3N3L21mL3Nub3d5L2NvbXBpbGVyczovc3cvbWYvc25vd3kvZGF0YTovc3cvbWYvc25vd3kvZW52aXJvbm1lbnQ6L3N3L21mL3Nub3d5L2xpYnJhcmllczovc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0=;' export '_ModuleTable004_;' '_ModuleTable_Sz_=4;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;subread/2.0.3:1;htseq/2.0.2:1;samtools/1.14:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:subread/2.0.3:htseq/2.0.2:samtools/1.14
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH='/sw/bioinfo/samtools/1.14/snowy/share/man:1;/opt/puppetlabs/puppet/share/man:1;/usr/share/man:2;/sw/uppmax/man:2;/opt/thinlinc/share/man:3'
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/sw/bioinfo/samtools/1.14/snowy/share/man::/opt/puppetlabs/puppet/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man
+++ export MANPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/samtools/1.14/snowy/bin:1;/sw/bioinfo/htseq/2.0.2/snowy/bin:1;/sw/bioinfo/subread/2.0.3/snowy/bin:1;/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:1;/home/marziehh/bin:2;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/puppetlabs/bin:1;/opt/thinlinc/bin:1;/opt/thinlinc/sbin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/samtools/1.14/snowy/bin:/sw/bioinfo/htseq/2.0.2/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin:/sw/bioinfo/subread/2.0.3/snowy/bin/utilities:/home/marziehh/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/thinlinc/bin:/opt/thinlinc/sbin:/sw/uppmax/bin
+++ export PATH
+++ SAMTOOLS_ROOT=/sw/bioinfo/samtools/1.14/snowy
+++ export SAMTOOLS_ROOT
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:1;/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2:1;/sw/mf/snowy/bioinfo-tools/misc/samtools/1.14:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/subread/2.0.3:/sw/mf/snowy/bioinfo-tools/misc/htseq/2.0.2:/sw/mf/snowy/bioinfo-tools/misc/samtools/1.14
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxodHNlcT17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjL2h0c2VxLzIuMC4yIixbImZ1bGxOYW1lIl09Imh0c2VxLzIuMC4yIixbImxvYWRP
+++ export _ModuleTable001_
+++ _ModuleTable002_=cmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHRzZXEvMi4wLjIiLH0sc2FtdG9vbHM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9zYW10b29scy8xLjE0IixbImZ1bGxOYW1lIl09InNhbXRvb2xzLzEuMTQiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzYW10b29scy8xLjE0Iix9LHN1YnJlYWQ9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9zdWJyZWFkLzIuMC4zIixbImZ1bGxOYW1lIl09InN1YnJlYWQvMi4wLjMiLFsibG9hZE9yZGVyIl09Mixwcm9w
+++ export _ModuleTable002_
+++ _ModuleTable003_=VD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJzdWJyZWFkIix9LH0sbXBhdGhBPXsiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYW5ub3RhdGlvbiIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2FsaWdubWVudCIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fzc2VtYmx5IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BoeWxvZ2VueSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BpcGVsaW5lcyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3N3X2NvbGxlY3Rpb25zIiwiL3N3L21mL3Nub3d5L2FwcGxpY2F0aW9ucyIsIi9zdy9t
+++ export _ModuleTable003_
+++ _ModuleTable004_=Zi9zbm93eS9idWlsZC10b29scyIsIi9zdy9tZi9zbm93eS9jb21waWxlcnMiLCIvc3cvbWYvc25vd3kvZGF0YSIsIi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudCIsIi9zdy9tZi9zbm93eS9saWJyYXJpZXMiLCIvc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3N3L21mL3Nub3d5L2FwcGxpY2F0aW9uczovc3cvbWYvc25vd3kvYnVpbGQtdG9vbHM6L3N3L21mL3Nub3d5L2NvbXBpbGVyczovc3cvbWYvc25vd3kvZGF0YTovc3cvbWYvc25vd3kvZW52aXJvbm1lbnQ6L3N3L21mL3Nub3d5L2xpYnJhcmllczovc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0=
+++ export _ModuleTable004_
+++ _ModuleTable_Sz_=4
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ WORK_DIR=/home/marziehh/Genom-Analysis
++ BAM_DIR=/proj/uppmax2025-3-3/GA_marziehh/bwa
++ GFF=/home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
++ FC_DIR=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts
++ HT_DIR=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts
++ mkdir -p /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts
++ SAMPLES=("SRR24516459 HP126_RNA" "SRR24516460 HP126_RNA" "SRR24516461 HP126_RNA" "SRR24516462 R7_RNA" "SRR24516463 R7_RNA" "SRR24516464 R7_RNA" "SRR24413065 HP126_DNA" "SRR24413071 R7_DNA")
++ log 'STEP 1: verify annotation /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:06:03] STEP 1: verify annotation /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff'
+[2025-05-15 08:06:03] STEP 1: verify annotation /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
++ [[ -f /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff ]]
++ STEP=2
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516459_HP126_RNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516459_HP126_RNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516459_HP126_RNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516459_HP126_RNA.sorted.bam ]]
++ log 'STEP 2: featureCounts for SRR24516459'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:06:03] STEP 2: featureCounts for SRR24516459'
+[2025-05-15 08:06:03] STEP 2: featureCounts for SRR24516459
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516459_HP126_RNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516459_HP126_RNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24516459_HP126_RNA.sorted.bam                 ||
+||                                                                            ||
+||             Output file : SRR24516459_HP126_RNA_fc.txt                     ||
+||                 Summary : SRR24516459_HP126_RNA_fc.txt.summary             ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24516459_HP126_RNA.sorted.bam...                       ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 22231137                                             ||
+||    Successfully assigned alignments : 507244 (2.3%)                        ||
+||    Running time : 0.07 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24516459_HP126_RNA_fc.txt.summ  ||
+|| ary"                                                                       ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516459_HP126_RNA_fc.txt ]]
++ STEP=3
++ log 'STEP 3: HTSeq-count for SRR24516459'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:06:07] STEP 3: HTSeq-count for SRR24516459'
+[2025-05-15 08:06:07] STEP 3: HTSeq-count for SRR24516459
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516459_HP126_RNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 7 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10200000 alignment record pairs processed.
+10300000 alignment record pairs processed.
+10400000 alignment record pairs processed.
+10500000 alignment record pairs processed.
+10600000 alignment record pairs processed.
+10700000 alignment record pairs processed.
+10800000 alignment record pairs processed.
+10900000 alignment record pairs processed.
+11000000 alignment record pairs processed.
+11100000 alignment record pairs processed.
+11114132 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516459_HP126_RNA_htseq.txt ]]
++ STEP=4
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516460_HP126_RNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516460_HP126_RNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516460_HP126_RNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516460_HP126_RNA.sorted.bam ]]
++ log 'STEP 4: featureCounts for SRR24516460'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:29:09] STEP 4: featureCounts for SRR24516460'
+[2025-05-15 08:29:09] STEP 4: featureCounts for SRR24516460
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516460_HP126_RNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516460_HP126_RNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24516460_HP126_RNA.sorted.bam                 ||
+||                                                                            ||
+||             Output file : SRR24516460_HP126_RNA_fc.txt                     ||
+||                 Summary : SRR24516460_HP126_RNA_fc.txt.summary             ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24516460_HP126_RNA.sorted.bam...                       ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 21671329                                             ||
+||    Successfully assigned alignments : 761372 (3.5%)                        ||
+||    Running time : 0.07 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24516460_HP126_RNA_fc.txt.summ  ||
+|| ary"                                                                       ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516460_HP126_RNA_fc.txt ]]
++ STEP=5
++ log 'STEP 5: HTSeq-count for SRR24516460'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:29:14] STEP 5: HTSeq-count for SRR24516460'
+[2025-05-15 08:29:14] STEP 5: HTSeq-count for SRR24516460
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516460_HP126_RNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 7 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10200000 alignment record pairs processed.
+10300000 alignment record pairs processed.
+10400000 alignment record pairs processed.
+10500000 alignment record pairs processed.
+10600000 alignment record pairs processed.
+10700000 alignment record pairs processed.
+10800000 alignment record pairs processed.
+10834478 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516460_HP126_RNA_htseq.txt ]]
++ STEP=6
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516461_HP126_RNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516461_HP126_RNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516461_HP126_RNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516461_HP126_RNA.sorted.bam ]]
++ log 'STEP 6: featureCounts for SRR24516461'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:51:37] STEP 6: featureCounts for SRR24516461'
+[2025-05-15 08:51:37] STEP 6: featureCounts for SRR24516461
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516461_HP126_RNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516461_HP126_RNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24516461_HP126_RNA.sorted.bam                 ||
+||                                                                            ||
+||             Output file : SRR24516461_HP126_RNA_fc.txt                     ||
+||                 Summary : SRR24516461_HP126_RNA_fc.txt.summary             ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24516461_HP126_RNA.sorted.bam...                       ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 19762195                                             ||
+||    Successfully assigned alignments : 656671 (3.3%)                        ||
+||    Running time : 0.06 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24516461_HP126_RNA_fc.txt.summ  ||
+|| ary"                                                                       ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516461_HP126_RNA_fc.txt ]]
++ STEP=7
++ log 'STEP 7: HTSeq-count for SRR24516461'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 08:51:41] STEP 7: HTSeq-count for SRR24516461'
+[2025-05-15 08:51:41] STEP 7: HTSeq-count for SRR24516461
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516461_HP126_RNA.sorted.bam
+17048 GFF lines processed.
+[bam_sort_core] merging from 6 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9879994 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516461_HP126_RNA_htseq.txt ]]
++ STEP=8
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516462_R7_RNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516462_R7_RNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516462_R7_RNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516462_R7_RNA.sorted.bam ]]
++ log 'STEP 8: featureCounts for SRR24516462'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 09:11:59] STEP 8: featureCounts for SRR24516462'
+[2025-05-15 09:11:59] STEP 8: featureCounts for SRR24516462
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516462_R7_RNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516462_R7_RNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24516462_R7_RNA.sorted.bam                    ||
+||                                                                            ||
+||             Output file : SRR24516462_R7_RNA_fc.txt                        ||
+||                 Summary : SRR24516462_R7_RNA_fc.txt.summary                ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24516462_R7_RNA.sorted.bam...                          ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 20228713                                             ||
+||    Successfully assigned alignments : 633543 (3.1%)                        ||
+||    Running time : 0.06 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24516462_R7_RNA_fc.txt.summary  ||
+|| "                                                                          ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516462_R7_RNA_fc.txt ]]
++ STEP=9
++ log 'STEP 9: HTSeq-count for SRR24516462'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 09:12:03] STEP 9: HTSeq-count for SRR24516462'
+[2025-05-15 09:12:03] STEP 9: HTSeq-count for SRR24516462
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516462_R7_RNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 6 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10113040 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516462_R7_RNA_htseq.txt ]]
++ STEP=10
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516463_R7_RNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516463_R7_RNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516463_R7_RNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516463_R7_RNA.sorted.bam ]]
++ log 'STEP 10: featureCounts for SRR24516463'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 09:33:50] STEP 10: featureCounts for SRR24516463'
+[2025-05-15 09:33:50] STEP 10: featureCounts for SRR24516463
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516463_R7_RNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516463_R7_RNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24516463_R7_RNA.sorted.bam                    ||
+||                                                                            ||
+||             Output file : SRR24516463_R7_RNA_fc.txt                        ||
+||                 Summary : SRR24516463_R7_RNA_fc.txt.summary                ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24516463_R7_RNA.sorted.bam...                          ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 20246206                                             ||
+||    Successfully assigned alignments : 442486 (2.2%)                        ||
+||    Running time : 0.06 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24516463_R7_RNA_fc.txt.summary  ||
+|| "                                                                          ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516463_R7_RNA_fc.txt ]]
++ STEP=11
++ log 'STEP 11: HTSeq-count for SRR24516463'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 09:33:54] STEP 11: HTSeq-count for SRR24516463'
+[2025-05-15 09:33:54] STEP 11: HTSeq-count for SRR24516463
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516463_R7_RNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 6 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10121805 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516463_R7_RNA_htseq.txt ]]
++ STEP=12
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516464_R7_RNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516464_R7_RNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516464_R7_RNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516464_R7_RNA.sorted.bam ]]
++ log 'STEP 12: featureCounts for SRR24516464'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 09:55:24] STEP 12: featureCounts for SRR24516464'
+[2025-05-15 09:55:24] STEP 12: featureCounts for SRR24516464
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516464_R7_RNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516464_R7_RNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24516464_R7_RNA.sorted.bam                    ||
+||                                                                            ||
+||             Output file : SRR24516464_R7_RNA_fc.txt                        ||
+||                 Summary : SRR24516464_R7_RNA_fc.txt.summary                ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24516464_R7_RNA.sorted.bam...                          ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 21647727                                             ||
+||    Successfully assigned alignments : 968060 (4.5%)                        ||
+||    Running time : 0.06 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24516464_R7_RNA_fc.txt.summary  ||
+|| "                                                                          ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24516464_R7_RNA_fc.txt ]]
++ STEP=13
++ log 'STEP 13: HTSeq-count for SRR24516464'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 09:55:28] STEP 13: HTSeq-count for SRR24516464'
+[2025-05-15 09:55:28] STEP 13: HTSeq-count for SRR24516464
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24516464_R7_RNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 7 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1500000 alignment record pairs processed.
+1600000 alignment record pairs processed.
+1700000 alignment record pairs processed.
+1800000 alignment record pairs processed.
+1900000 alignment record pairs processed.
+2000000 alignment record pairs processed.
+2100000 alignment record pairs processed.
+2200000 alignment record pairs processed.
+2300000 alignment record pairs processed.
+2400000 alignment record pairs processed.
+2500000 alignment record pairs processed.
+2600000 alignment record pairs processed.
+2700000 alignment record pairs processed.
+2800000 alignment record pairs processed.
+2900000 alignment record pairs processed.
+3000000 alignment record pairs processed.
+3100000 alignment record pairs processed.
+3200000 alignment record pairs processed.
+3300000 alignment record pairs processed.
+3400000 alignment record pairs processed.
+3500000 alignment record pairs processed.
+3600000 alignment record pairs processed.
+3700000 alignment record pairs processed.
+3800000 alignment record pairs processed.
+3900000 alignment record pairs processed.
+4000000 alignment record pairs processed.
+4100000 alignment record pairs processed.
+4200000 alignment record pairs processed.
+4300000 alignment record pairs processed.
+4400000 alignment record pairs processed.
+4500000 alignment record pairs processed.
+4600000 alignment record pairs processed.
+4700000 alignment record pairs processed.
+4800000 alignment record pairs processed.
+4900000 alignment record pairs processed.
+5000000 alignment record pairs processed.
+5100000 alignment record pairs processed.
+5200000 alignment record pairs processed.
+5300000 alignment record pairs processed.
+5400000 alignment record pairs processed.
+5500000 alignment record pairs processed.
+5600000 alignment record pairs processed.
+5700000 alignment record pairs processed.
+5800000 alignment record pairs processed.
+5900000 alignment record pairs processed.
+6000000 alignment record pairs processed.
+6100000 alignment record pairs processed.
+6200000 alignment record pairs processed.
+6300000 alignment record pairs processed.
+6400000 alignment record pairs processed.
+6500000 alignment record pairs processed.
+6600000 alignment record pairs processed.
+6700000 alignment record pairs processed.
+6800000 alignment record pairs processed.
+6900000 alignment record pairs processed.
+7000000 alignment record pairs processed.
+7100000 alignment record pairs processed.
+7200000 alignment record pairs processed.
+7300000 alignment record pairs processed.
+7400000 alignment record pairs processed.
+7500000 alignment record pairs processed.
+7600000 alignment record pairs processed.
+7700000 alignment record pairs processed.
+7800000 alignment record pairs processed.
+7900000 alignment record pairs processed.
+8000000 alignment record pairs processed.
+8100000 alignment record pairs processed.
+8200000 alignment record pairs processed.
+8300000 alignment record pairs processed.
+8400000 alignment record pairs processed.
+8500000 alignment record pairs processed.
+8600000 alignment record pairs processed.
+8700000 alignment record pairs processed.
+8800000 alignment record pairs processed.
+8900000 alignment record pairs processed.
+9000000 alignment record pairs processed.
+9100000 alignment record pairs processed.
+9200000 alignment record pairs processed.
+9300000 alignment record pairs processed.
+9400000 alignment record pairs processed.
+9500000 alignment record pairs processed.
+9600000 alignment record pairs processed.
+9700000 alignment record pairs processed.
+9800000 alignment record pairs processed.
+9900000 alignment record pairs processed.
+10000000 alignment record pairs processed.
+10100000 alignment record pairs processed.
+10200000 alignment record pairs processed.
+10300000 alignment record pairs processed.
+10400000 alignment record pairs processed.
+10500000 alignment record pairs processed.
+10600000 alignment record pairs processed.
+10700000 alignment record pairs processed.
+10800000 alignment record pairs processed.
+10822178 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24516464_R7_RNA_htseq.txt ]]
++ STEP=14
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413065_HP126_DNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24413065_HP126_DNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24413065_HP126_DNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413065_HP126_DNA.sorted.bam ]]
++ log 'STEP 14: featureCounts for SRR24413065'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:18:36] STEP 14: featureCounts for SRR24413065'
+[2025-05-15 10:18:36] STEP 14: featureCounts for SRR24413065
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24413065_HP126_DNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413065_HP126_DNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24413065_HP126_DNA.sorted.bam                 ||
+||                                                                            ||
+||             Output file : SRR24413065_HP126_DNA_fc.txt                     ||
+||                 Summary : SRR24413065_HP126_DNA_fc.txt.summary             ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24413065_HP126_DNA.sorted.bam...                       ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 2367709                                              ||
+||    Successfully assigned alignments : 1071202 (45.2%)                      ||
+||    Running time : 0.02 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24413065_HP126_DNA_fc.txt.summ  ||
+|| ary"                                                                       ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24413065_HP126_DNA_fc.txt ]]
++ STEP=15
++ log 'STEP 15: HTSeq-count for SRR24413065'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:18:37] STEP 15: HTSeq-count for SRR24413065'
+[2025-05-15 10:18:37] STEP 15: HTSeq-count for SRR24413065
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413065_HP126_DNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 1 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1183170 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24413065_HP126_DNA_htseq.txt ]]
++ STEP=16
++ for LINE in '"${SAMPLES[@]}"'
++ read SAMPLE TAG
++ BAM=/proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413071_R7_DNA.sorted.bam
++ FC_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24413071_R7_DNA_fc.txt
++ HT_OUT=/proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24413071_R7_DNA_htseq.txt
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413071_R7_DNA.sorted.bam ]]
++ log 'STEP 16: featureCounts for SRR24413071'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:23:46] STEP 16: featureCounts for SRR24413071'
+[2025-05-15 10:23:46] STEP 16: featureCounts for SRR24413071
++ featureCounts -T 8 -p -t gene -F GFF3 -g ID -s 1 -a /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff -o /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24413071_R7_DNA_fc.txt /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413071_R7_DNA.sorted.bam
+
+Warning: Unknown annotation format: GFF3. GTF format is used.
+
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.3
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR24413071_R7_DNA.sorted.bam                    ||
+||                                                                            ||
+||             Output file : SRR24413071_R7_DNA_fc.txt                        ||
+||                 Summary : SRR24413071_R7_DNA_fc.txt.summary                ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : r7_annotation_clean.gff (GTF)                    ||
+||      Dir for temp files : /proj/uppmax2025-3-3/GA_marziehh/diff_expres ... ||
+||                                                                            ||
+||                 Threads : 8                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file r7_annotation_clean.gff ...                           ||
+||    Features : 8524                                                         ||
+||    Meta-features : 8524                                                    ||
+||    Chromosomes/contigs : 2                                                 ||
+||                                                                            ||
+|| Process BAM file SRR24413071_R7_DNA.sorted.bam...                          ||
+||    Strand specific : stranded                                              ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 2867260                                              ||
+||    Successfully assigned alignments : 1292873 (45.1%)                      ||
+||    Running time : 0.02 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/proj/uppmax2025-3-3/GA  ||
+|| _marziehh/diff_expression/featureCounts/SRR24413071_R7_DNA_fc.txt.summary  ||
+|| "                                                                          ||
+||                                                                            ||
+\\============================================================================//
+
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts/SRR24413071_R7_DNA_fc.txt ]]
++ STEP=17
++ log 'STEP 17: HTSeq-count for SRR24413071'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:23:48] STEP 17: HTSeq-count for SRR24413071'
+[2025-05-15 10:23:48] STEP 17: HTSeq-count for SRR24413071
++ samtools sort -n /proj/uppmax2025-3-3/GA_marziehh/bwa/SRR24413071_R7_DNA.sorted.bam
++ htseq-count -f bam -r name -s yes --type=gene --idattr=ID - /home/marziehh/Genom-Analysis/results/annotation/prokka_r7/r7_annotation_clean.gff
+17048 GFF lines processed.
+[bam_sort_core] merging from 2 files and 1 in-memory blocks...
+[E::idx_find_and_load] Could not retrieve index file for '<stdin>'
+100000 alignment record pairs processed.
+200000 alignment record pairs processed.
+300000 alignment record pairs processed.
+400000 alignment record pairs processed.
+500000 alignment record pairs processed.
+600000 alignment record pairs processed.
+700000 alignment record pairs processed.
+800000 alignment record pairs processed.
+900000 alignment record pairs processed.
+1000000 alignment record pairs processed.
+1100000 alignment record pairs processed.
+1200000 alignment record pairs processed.
+1300000 alignment record pairs processed.
+1400000 alignment record pairs processed.
+1433028 alignment record pairs processed.
++ [[ -f /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts/SRR24413071_R7_DNA_htseq.txt ]]
++ STEP=18
++ log 'STEP 18: all read counting completed'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:30:14] STEP 18: all read counting completed'
+[2025-05-15 10:30:14] STEP 18: all read counting completed
++ log 'featureCounts: /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:30:14] featureCounts: /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts'
+[2025-05-15 10:30:14] featureCounts: /proj/uppmax2025-3-3/GA_marziehh/diff_expression/featureCounts
++ log 'HTSeq-count:  /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts'
+++ date '+%Y-%m-%d %H:%M:%S'
++ echo '[2025-05-15 10:30:14] HTSeq-count:  /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts'
+[2025-05-15 10:30:14] HTSeq-count:  /proj/uppmax2025-3-3/GA_marziehh/diff_expression/htseq_counts
